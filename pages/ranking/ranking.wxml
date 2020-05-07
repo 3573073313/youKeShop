@@ -1,0 +1,63 @@
+<!--pages/ranking/ranking.wxml-->
+<view class="rankingPages">
+	<view class="publicMain {{Navindex == 0 ? 'NavShow' : ''}}">
+		<!-- 产品 -->
+		<view class="productSon FlexD" catchtap="ProductFun" data-index="{{index}}" wx:for="{{NavCont}}" wx:key="index">
+			<view class="productSonImgIndex {{index < 3 ? 'Active' : ''}}">
+				<text>{{index + 1}}</text>
+			</view>
+			<view class="productSonImg">
+				<image src="{{item.NavContImg}}"></image>
+			</view>
+			<view class="productSonCont">
+				<view class="productSonContTitle TxtHide">
+					<text>{{item.NavContTxt}}</text>
+				</view>
+				<view class="productSonContPeople">
+					￥<text>{{item.NavContPeople}}</text>.00
+				</view>
+			</view>
+		</view>
+		<!-- 产品 -->
+
+	</view>
+	<view class="publicMain {{Navindex == 1 ? 'NavShow' : ''}}">
+		<!-- 店铺 -->
+		<view class="rankingShop" wx:for="{{NavShop}}" wx:key="index" catchtap="ShopFun">
+			<view class="productSonImgIndex {{index < 3 ? 'Active' : ''}}">
+				<text>{{index + 1}}</text>
+			</view>
+			<view class="rankingShopTitle FlexD">
+				<view class="rankingShopTitleImg mr20 Ohidden">
+					<image src="{{item.NavShopImg}}"></image>
+				</view>
+				<view class="rankingShopTitleTxt">
+					<view class="mt10">
+						<text>{{item.NavShopTitle}}</text>
+					</view>
+					<view style="color: #999;">
+						<text>销量:{{item.NavShopNum}}</text>
+					</view>
+				</view>
+			</view>
+			<view class="rankingShopCont FlexDJbet FlexD">
+				<view class="rankingShopContSon Ohidden" wx:for="{{item.NavShop}}" wx:key="index">
+					<image src="{{item.NavShopImg}}"></image>
+				</view>
+			</view>
+		</view>
+		<!-- 店铺 -->
+
+
+	</view>
+
+	<!-- 底部二次导航 -->
+	<view class="rankingPagesBtm FlexD">
+		<view wx:for="{{NavList}}" wx:key="index" class="{{Navindex == index ? 'NavColor' : ''}}" catchtap="NavFun" data-index="{{index}}">
+			<view>
+				<i-icon type="{{item.icon}}" size="24" />
+			</view>
+			<view>{{item.NavListTitle}}</view>
+		</view>
+	</view>
+</view>

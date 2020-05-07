@@ -1,0 +1,52 @@
+<!--pages/store_information/store_information.wxml-->
+<view class="storePage">
+
+	<!-- 店铺基本信息 -->
+
+	<view class="storePageInformation">
+		<view class="storePageInformationLoginImg">
+			<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587724674831&di=123952d069b7b799c9762293a86758c1&imgtype=0&src=http%3A%2F%2Fimg.aso.aizhan.com%2Ficon%2Ffa%2F28%2Ff2%2Ffa28f2ee419988b019454955b1529c52.jpg"></image>
+		</view>
+		<view class="storePageInformationXinXi">
+			<view class="storePageInformationXinXiName">
+				<text>春风官方旗舰店</text>
+			</view>
+			<view>
+				粉丝数:<text>20030</text>人
+			</view>
+		</view>
+	</view>
+
+	<!-- 店铺基本信息 -->
+	<view class="TitleStore">
+		<text>基础信息</text>
+	</view>
+
+	<i-cell-group>
+		<i-cell i-class="lefts" title="企业名称:" value="春风官方旗舰店"></i-cell>
+		<i-cell i-class="lefts" title="服务电话:" value="0531-6565-0232"></i-cell>
+		<i-cell i-class="lefts" title="所在地址:" value="山东济南"></i-cell>
+		<i-cell i-class="lefts" title="资质类型:" value="个体工商户"></i-cell>
+		<i-cell i-class="lefts" title="认证状态:" value="已认证"></i-cell>
+		<i-cell i-class="lefts" title="资质有效期:" value="长期"></i-cell>
+		<i-cell i-class="lefts" title="开店时间:" value="2020-05-06至今"></i-cell>
+		<i-cell i-class="lefts" title="主营产品:" value="摩托车，摩托护具"></i-cell>
+	</i-cell-group>
+
+
+	<view class="TitleStore">
+		<text>店铺好评率(5.0)</text>
+	</view>
+
+	<i-cell-group>
+		<i-cell i-class="lefts" title="描述相符:" value="4.9"></i-cell>
+		<i-cell i-class="lefts" title="态度服务:" value="5.0"></i-cell>
+		<i-cell i-class="lefts" title="物流服务:" value="4.8"></i-cell>
+	</i-cell-group>
+
+	<i-button bind:click="handleClick" type="error">店铺涉嫌违规，我要举报</i-button>
+
+	<!-- 底部版权信息编写开始 -->
+	<i-divider content="济南优客 © 版权所有" i-class="copyrightClass" color="#e0e0e0" lineColor="#e0e0e0"></i-divider>
+	<!-- 底部版权信息编写结束 -->
+</view>

@@ -1,0 +1,495 @@
+/**app.wxss**/
+@import "/WxssPublic/main.wxss";
+@import "/WxssPublic/icon.wxss";
+
+@font-face {
+	src: url('https://group.dmeit.cn/FontShuZi.TTF');
+	font-family: 'ShuziFont';
+}
+
+/* lineheight */
+
+.Line100 {
+	line-height: 100rpx;
+}
+
+/* 居中类 */
+.txtC {
+	text-align: center;
+}
+
+/* 字体加粗 */
+.fontB {
+	font-weight: bold;
+}
+
+/* 公共字体类 */
+.pSize30 {
+	font-size: 30rpx;
+	font-weight: bold;
+}
+
+.pSize35 {
+	font-size: 35rpx;
+}
+
+.pSize40 {
+	font-size: 40rpx;
+}
+
+/* 产品推荐 */
+.PublicTitle {
+	width: 94%;
+	height: 100rpx;
+	background-color: #fff;
+	text-align: center;
+	line-height: 100rpx;
+	font-size: 34rpx;
+	font-weight: bold;
+	color: #ef2a28;
+	margin: 0 auto;
+	margin-top: 20rpx;
+	border-radius: 20rpx;
+}
+
+.W80 {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.W90 {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.W100 {
+	width: 100%;
+}
+
+.Wauto {
+	width: auto;
+}
+
+.Ohidden {
+	overflow: hidden;
+}
+
+/* 多行数隐藏 */
+.TxtHide {
+	word-break: break-all;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+/* 公共的背景颜色 */
+.publicBg {
+	background-color: #fafafa;
+}
+
+.BgShow {
+	background-color: #fff;
+	box-shadow: 0rpx 0rpx 10rpx #e0e0e0;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 200rpx 0;
+	box-sizing: border-box;
+}
+
+
+.swiper-box .wx-swiper-dot {
+	width: 30rpx;
+	display: inline-flex;
+	height: 10rpx;
+	margin-left: 5rpx;
+	justify-content: space-between;
+}
+
+.swiper-box .wx-swiper-dot::before {
+	content: '';
+	flex-grow: 1;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 8rpx
+}
+
+.swiper-box .wx-swiper-dot-active::before {
+	background: rgba(244, 0, 0, 0.8);
+}
+
+
+/* public WeChatTop */
+.WeChatTop {
+	width: 100rpx;
+	height: 100rpx;
+	background-color: rgba(235, 65, 65, 1);
+	position: fixed;
+	bottom: 200rpx;
+	right: 30rpx;
+	border-radius: 100rpx;
+	text-align: center;
+	line-height: 90rpx;
+	z-index: 99999;
+}
+
+/* 公共倒计时 + 价格 */
+.public_Detail_DateTime {
+	width: 100%;
+	height: 100rpx;
+	background-image: url(https://group.dmeit.cn/bgPublic.jpg);
+	background-size: cover;
+	display: flex;
+	flex-direction: row;
+	padding: 0rpx 30rpx;
+	justify-content: space-between;
+}
+
+.public_Detail_DateTime_People {
+	width: auto;
+	height: 100rpx;
+	line-height: 100rpx;
+	color: #fff;
+}
+
+.public_Detail_DateTime_People>view>text {
+	font-size: 34rpx;
+	font-weight: bold;
+}
+
+.public_Detail_DateTimeTimes {
+	width: auto;
+	height: 100rpx;
+	font-size: 34rpx;
+	font-weight: 500;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+}
+
+.public_Detail_DateTimeTimes>view {
+	line-height: 35rpx;
+}
+
+.TextLine {
+	line-height: 100rpx;
+	font-size: 30rpx;
+	font-weight: 500;
+}
+
+.public_Detail_Information {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	margin-bottom: 30rpx;
+}
+
+.public_Detail_InformationTitle {
+	width: 100%;
+	height: auto;
+	font-size: 34rpx;
+	padding: 20rpx 30rpx;
+}
+
+.public_Detail_InformationSalesNum {
+	width: 100%;
+	height: 70rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	line-height: 70rpx;
+	padding: 0rpx 30rpx;
+	color: #666;
+}
+
+
+.publicTips {
+	width: 100%;
+	height: 100rpx;
+	background-color: #fff;
+	text-align: center;
+	font-size: 34rpx;
+	line-height: 100rpx;
+	font-weight: 500;
+	color: #333;
+	margin-top: 30rpx;
+}
+
+
+.publicDetail {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	padding-bottom: 110rpx;
+}
+
+.publicDetail>image {
+	width: 100%;
+}
+
+.NavColor {
+	color: #ef2a28;
+	font-weight: bold;
+}
+
+.NavShow {
+	display: block !important;
+}
+
+.mallTitlePublic {
+	width: 100%;
+	height: 100rpx;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	line-height: 100rpx;
+	font-size: 32rpx;
+	font-weight: bold;
+	padding: 0rpx 30rpx;
+	color: #000;
+	justify-content: space-between;
+}
+
+
+.mallTitlePublic>view {
+	display: flex;
+	flex-direction: row;
+}
+
+.mallTitlePublicIcon {
+	width: 10rpx;
+	height: 40rpx;
+	background-color: #ef2a28;
+	border-radius: 5rpx;
+	margin-top: 30rpx;
+	margin-right: 10rpx;
+}
+
+/* ml - * */
+.ml10 {
+	margin-left: 10rpx;
+}
+
+.ml20 {
+	margin-left: 20rpx;
+}
+
+.ml30 {
+	margin-left: 30rpx;
+}
+
+.ml40 {
+	margin-left: 40rpx;
+}
+
+.ml50 {
+	margin-left: 50rpx;
+}
+
+.ml60 {
+	margin-left: 60rpx;
+}
+
+.ml70 {
+	margin-left: 70rpx;
+}
+
+.ml80 {
+	margin-left: 80rpx;
+}
+
+.ml90 {
+	margin-left: 90rpx;
+}
+
+.ml100 {
+	margin-left: 100rpx;
+}
+
+/* mr-* */
+.mr10 {
+	margin-right: 10rpx;
+}
+
+.mr20 {
+	margin-right: 20rpx;
+}
+
+.mr30 {
+	margin-right: 30rpx;
+}
+
+.mr40 {
+	margin-right: 40rpx;
+}
+
+.mr50 {
+	margin-right: 50rpx;
+}
+
+.mr60 {
+	margin-right: 60rpx;
+}
+
+.mr70 {
+	margin-right: 60rpx;
+}
+
+.mr80 {
+	margin-right: 80rpx;
+}
+
+
+.mr90 {
+	margin-right: 90rpx;
+}
+
+
+.mr100 {
+	margin-right: 100rpx;
+}
+
+/* mt- * */
+
+.mt10 {
+	margin-top: 10rpx;
+}
+
+.mt20 {
+	margin-top: 20rpx;
+}
+
+.mt24 {
+	margin-top: 24rpx;
+}
+
+.mt30 {
+	margin-top: 30rpx;
+}
+
+
+
+.mt40 {
+	margin-top: 40rpx;
+}
+
+
+.mt50 {
+	margin-top: 50rpx;
+}
+
+
+
+.mt60 {
+	margin-top: 60rpx;
+}
+
+
+.mt70 {
+	margin-top: 70rpx;
+}
+
+
+.mt80 {
+	margin-top: 80rpx;
+}
+
+
+.mt90 {
+	margin-top: 90rpx;
+}
+
+.mt100 {
+	margin-top: 100rpx;
+}
+
+.mt120 {
+	margin-top: 120rpx;
+}
+
+.mt140 {
+	margin-top: 140rpx;
+}
+
+
+.mt160 {
+	margin-top: 160rpx;
+}
+
+.mt180 {
+	margin-top: 180rpx;
+}
+
+/* flex */
+
+.Flex {
+	display: flex;
+}
+
+.FlexD {
+	display: flex;
+	flex-direction: row;
+}
+
+.FlexDJbet {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.flexRow {
+	flex-direction: row;
+}
+
+.flexColumn {
+	flex-direction: column;
+}
+
+.BorShow {
+	font-weight: bold;
+	border-bottom: 8rpx solid #fff !important;
+	box-sizing: border-box;
+}
+
+.paddLR20 {
+	padding: 0rpx 20rpx;
+}
+
+.Abottom {
+	border-bottom: 1rpx solid #e1e1e1;
+	box-sizing: border-box;
+}
+
+/* 动画样式 */
+.Animation {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	bottom: 0rpx;
+	left: 0rpx;
+	background-color: #fff;
+	border-top-left-radius: 20rpx;
+	border-top-right-radius: 20rpx;
+}
+
+.AnimationSon {
+	width: 100%;
+	height: 100rpx;
+	margin: 0 auto;
+	color: #333;
+	text-align: center;
+	line-height: 100rpx;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.ShopListSon {
+	width: 100%;
+	height: 200rpx;
+	background-color: blue;
+}

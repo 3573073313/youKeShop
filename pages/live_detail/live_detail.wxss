@@ -1,0 +1,306 @@
+/* pages/live_detail/live_detail.wxss */
+.liveDetail {
+	width: 100%;
+	height: 100vh;
+	background-image: url(https://group.dmeit.cn/liveBgImgs.jpg);
+	background-size: cover;
+	position: relative;
+}
+
+
+live-pusher {
+	width: 300px;
+	height: 225px;
+}
+
+.livePush {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0rpx;
+	left: 0rpx;
+	z-index: 999;
+}
+
+.liveDetailXinxi {
+	width: 100%;
+	height: 400rpx;
+	justify-content: space-between;
+	position: absolute;
+	top: 0rpx;
+	left: 0rpx;
+}
+
+.liveDetailXinxiLeft {
+	width: auto;
+	padding: 0rpx 20rpx;
+	height: 90rpx;
+	background-color: rgba(112, 112, 112, 0.5);
+	border-top-right-radius: 10rpx;
+	border-bottom-right-radius: 10rpx;
+	color: #fff;
+}
+
+.liveDetailXinxiLeftImg {
+	width: 75rpx;
+	height: 75rpx;
+	/* background-color: #ef2a28; */
+	border-radius: 100rpx;
+	overflow: hidden;
+}
+
+.liveDetailXinxiLeftImg>image {
+	width: 100%;
+	height: 100%;
+}
+
+.liveDetailXinxiLeftTitle {
+	width: auto;
+	padding: 0rpx 10rpx;
+	height: 75rpx;
+	/* background-color: seagreen; */
+}
+
+
+
+.liveDetailXinxiLeftFollow {
+	width: 120rpx;
+	height: 60rpx;
+	background-color: #ef2a28;
+	line-height: 60rpx;
+	border-radius: 10rpx;
+	color: #fff;
+	text-align: center;
+	margin-top: 16rpx;
+}
+
+
+.liveDetailXinxiNum {
+	width: 200rpx;
+	height: 100rpx;
+	border-radius: 10rpx;
+	border: 2rpx solid #ef2a28;
+	color: #fff;
+	box-sizing: border-box;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 270rpx;
+}
+
+.liveDetailXinxiNumTitle {
+	width: 100%;
+	height: 50rpx;
+	background-color: #ef2a28;
+	color: #fff;
+	line-height: 50rpx;
+}
+
+
+.liveDetailXinxiNums {
+	width: 100%;
+	height: 50rpx;
+	line-height: 50rpx;
+}
+
+.liveDetailBottom {
+	width: 100%;
+	height: 600rpx;
+	position: absolute;
+	bottom: 0rpx;
+	left: 0rpx;
+	z-index: 999;
+}
+
+.liveDetailBottomInformaction {
+	width: 100%;
+	height: 450rpx;
+}
+
+.liveDetailBottomNav {
+	width: 100%;
+	height: 150rpx;
+	padding: 0rpx 20rpx
+}
+
+.liveDetailBottomNavShop {
+	width: 100rpx;
+	height: 92rpx;
+	flex-shrink: 0;
+	/* background-color: red; */
+	background-image: url(https://group.dmeit.cn/017df380b2e426d25344a64df404a55.png);
+	background-size: 90% 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	line-height: 122rpx;
+	margin-top: 12rpx;
+	font-size: 30rpx;
+	color: #fff;
+	background-position: center 0rpx;
+}
+
+.liveDetailBottomNavInput {
+	width: 300rpx;
+	height: 80rpx;
+	flex-shrink: 0;
+	background-color: #fff;
+	text-align: center;
+	line-height: 80rpx;
+	font-size: 32rpx;
+	border-radius: 50rpx;
+}
+
+.liveDetailBottomNavThree {
+	width: 100%;
+	height: 120rpx;
+}
+
+.liveDetailBottomNavThree>view {
+	flex: 1;
+	text-align: center;
+	color: #fff;
+	line-height: 120rpx;
+}
+
+.count {
+	width: 100rpx;
+	height: 40rpx;
+	position: absolute;
+	top: 95rpx;
+	line-height: 40rpx;
+}
+
+.input>view {
+	width: 80%;
+	height: 70rpx;
+	flex-shrink: 0;
+	padding: 0rpx 20rpx;
+}
+
+.input>view>input {
+	width: 100%;
+	height: 70rpx;
+	background-color: #fff;
+	text-align: left;
+	flex-shrink: 0;
+	text-indent: 1.5em;
+}
+
+.input>view {
+	height: 70rpx;
+	flex-shrink: 0;
+}
+
+.input>view>button {
+	width: 100%;
+	height: 70rpx;
+	background-color: #ef2a28;
+	padding: 0rpx 0rpx;
+	font-size: 28rpx;
+	line-height: 70rpx;
+	color: #fff;
+}
+
+button::after {
+	border: none;
+}
+
+scroll-view {
+	height: 500rpx;
+}
+
+.ShopList {
+	width: 100%;
+	height: 600rpx;
+	background-color: #fff;
+}
+
+.ShopListSon {
+	width: 100%;
+	height: 200rpx;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20rpx;
+	justify-content: space-between;
+	padding: 0rpx 30rpx;
+	border-bottom: 2rpx solid #e1e1e1;
+	box-sizing: border-box;
+}
+
+.ShopListTitle {
+	width: 100%;
+	height: 100rpx;
+	color: #000;
+	font-weight: bold;
+	background-color: #fff;
+	text-align: center;
+	line-height: 100rpx;
+	font-size: 32rpx;
+}
+
+.ShopListSonImg {
+	width: 170rpx;
+	height: 170rpx;
+	/* background-color: seagreen; */
+	flex-shrink: 0;
+	position: relative;
+}
+
+.ShopListSonImg>image {
+	width: 100%;
+	height: 100%;
+}
+
+.ShopListSonNum {
+	width: 50rpx;
+	height: 50rpx;
+	background-color: #000;
+	text-align: center;
+	line-height: 50rpx;
+	position: absolute;
+	top: 0rpx;
+	left: 0rpx;
+	color: #fff;
+	z-index: 9999;
+}
+
+.ShopListSonCont {
+	width: 100%;
+	height: 170rpx;
+	/* background-color: pink; */
+	text-align: left;
+	margin-left: 20rpx;
+}
+
+
+.ShopListSonContTop {
+	width: 100%;
+	height: 100rpx;
+	/* background-color: red; */
+	font-size: 30rpx;
+}
+
+.ShopListSonContBtm {
+	width: 100%;
+	height: 70rpx;
+	/* background-color: #f90; */
+	font-weight: bold;
+	line-height: 70rpx;
+	font-size: 34rpx;
+	color: #ef2a28;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.people {
+	width: auto;
+	font-size: 26rpx;
+	padding: 0rpx 20rpx;
+	border-radius: 10rpx;
+	height: 70rpx;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
+}

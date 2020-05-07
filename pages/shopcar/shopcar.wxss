@@ -1,0 +1,250 @@
+/* pages/shopcar/shopcar.wxss */
+.ShoppingCar {
+    width: 100%;
+    height: auto;
+    background-color: #F3F3F3;
+}
+
+/* 购物产品 */
+.ShoppingProduct {
+    width: 100%;
+    height: auto;
+    /* background-color: slateblue; */
+}
+
+/* 没有产品样式层 */
+.ShoppingProductError {
+    width: 100%;
+    height: 600rpx;
+    background-color: transparent;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+/* 产品编辑 */
+.edit {
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2rpx solid #e1e1e1;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0rpx 30rpx;
+}
+
+.CarTitleShow {
+    display: block;
+    font-weight: bold;
+    color: #ef2a28;
+}
+
+.CarTitleHide {
+    display: none;
+}
+
+.edit>view {
+    line-height: 90rpx;
+    color: #ef2a28;
+}
+
+.show
+{
+    display: block;
+}
+
+.hide
+{
+    display: none !important;
+}
+
+.stickyClass {
+    position: sticky;
+    top: 0;
+    z-index: 999999999;
+    /* //当menu元素距离可视窗口顶部<0时，menu由static定位切换为fixed定位 */
+}
+
+/* 选中 */
+.ChenStyle {
+    width: 100rpx;
+    height: 52rpx;
+    margin-top: 70rpx;
+    /* background-color: red; */
+    margin-right: 20rpx;
+}
+
+
+/* // .wxcss代码(只是自定义多选框的代码,其余忽略) */
+/* // 重写多选框样式 */
+label.checkbox {
+    padding-left: 20rpx;
+}
+
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+    width: 50rpx !important;
+    height: 50rpx !important;
+}
+
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+    background: #ef2a28 !important;
+    border: 2rpx solid #ef2a28 !important;
+    border-radius: 100rpx !important;
+}
+
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+    width: 28rpx;
+    height: 28rpx;
+    line-height: 28rpx;
+    text-align: center;
+    font-size: 22rpx;
+    color: #fff;
+    background: transparent;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+/* 有产品 */
+.ShoppingProductSuccess {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 500;
+    padding-bottom: 120rpx;
+}
+
+.ShoppingProductError>view>image {
+    width: 480rpx;
+    height: 345rpx;
+    margin-top: 50rpx;
+    border-radius: 10rpx;
+}
+
+.ShoppingProductErrorSon {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding: 20rpx 30rpx;
+    border-bottom: 2rpx solid #e1e1e1;
+    box-sizing: border-box;
+}
+
+.ShoppingProductErrorSonImg {
+    width: 150rpx;
+    height: 150rpx;
+    background-color: #e1e1e1;
+    margin-right: 20rpx;
+    flex-shrink: 0;
+}
+
+.ShoppingProductErrorSonImg>image {
+    width: 100%;
+    height: 100%;
+}
+
+.ShoppingProductErrorSonCont {
+    width: auto;
+    min-width: 200rpx;
+    height: auto;
+    text-align: left;
+}
+
+.MoneyIsCaoZ {
+    width: 100%;
+    height: 70rpx;
+    font-weight: bold;
+    line-height: 70rpx;
+    color: rgba(235, 65, 65, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.AddNum {
+    width: auto;
+    height: 50rpx;
+    background-color: #f32e1e;
+    margin-top: 10rpx;
+    margin-right: 30rpx;
+    display: flex;
+    flex-direction: row;
+    border: 2rpx solid #f32e1e;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+.MoneyIsCaoZ>view>text {
+    font-size: 36rpx;
+}
+
+.AddNum>view {
+    width: 55rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    color: #fff;
+}
+
+.AddNum>view>input {
+    width: 50rpx;
+    height: 50rpx;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    font-size: 30rpx;
+    font-weight: 500;
+}
+
+.GoShopHome {
+    width: 250rpx;
+    height: 70rpx;
+    background-color: #f32e1e;
+    margin: 0 auto;
+    margin-top: 30rpx;
+    border-radius: 50rpx;
+    color: #fff;
+    line-height: 70rpx;
+}
+
+/* 购物操作 */
+.shopOperation {
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0rpx;
+    left: 0rpx;
+    z-index: 999999999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 120rpx;
+    padding: 0rpx 30rpx;
+}
+
+.Settlement {
+    display: flex;
+    flex-direction: row;
+    /* background-color: rebeccapurple; */
+}
+
+.SettlementBtn {
+    width: auto;
+    height: 80rpx;
+    background-image: linear-gradient(to right, #ec1210 0%, #f53e1f 100%);
+    color: #FFF;
+    padding: 0rpx 20rpx;
+    border-radius: 100rpx;
+    line-height: 80rpx;
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+}

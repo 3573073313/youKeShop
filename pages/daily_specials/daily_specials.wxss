@@ -1,0 +1,111 @@
+/* pages/daily_specials/daily_specials.wxss */
+.dailySpecialsPages {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+}
+
+.dailySpecialsPagesNav {
+  width: 100%;
+  height: 100rpx;
+  background-color: #ef2a28;
+  position: sticky;
+  top: 0rpx;
+  z-index: 9999;
+}
+
+.dailySpecialsPagesNav>scroll-view {
+  height: 210rpx;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+
+
+.dailySpecialsPagesNavSon {
+  height: 80rpx;
+  text-align: center;
+  line-height: 70rpx;
+  margin-top: 14rpx;
+  margin-left: 25rpx;
+  background-color: #ef2a28;
+  font-size: 30rpx;
+  color: #fff;
+  border-bottom: 8rpx solid #ef2a28;
+  box-sizing: border-box;
+}
+
+.dailySpecialsPagesTitle {
+  width: 100%;
+  height: 100rpx;
+  background-color: #ef2a28;
+  color: #fff;
+}
+
+.dailySpecialsPagesTitleH2 {
+  height: 100rpx;
+  width: 200rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.dailySpecialsPagesConts {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0rpx 30rpx;
+}
+
+.dailySpecialsPagesCont {
+  width: 100%;
+  height: auto;
+  padding: 0rpx 20rpx;
+  padding-bottom: 30rpx;
+}
+
+.dailySpecialsPagesContSon {
+  width: 100%;
+  height: 280rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 0rpx 30rpx;
+}
+
+.dailySpecialsPagesContSonImg {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.dailySpecialsPagesContSonImg>image {
+  width: 100%;
+  height: 100%;
+}
+
+.dailySpecialsPagesContSonMain {
+  width: 100%;
+  height: 200rpx;
+  flex-direction: column;
+}
+
+.dailySpecialsPagesContSonMainTitle {
+  width: 100%;
+  height: 108rpx;
+  font-size: 32rpx;
+  -webkit-line-clamp: 2;
+}
+
+.dailySpecialsPagesBtn {
+  width: 200rpx;
+  height: 60rpx;
+  background-color: #ef2a28;
+  border-radius: 100rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+}

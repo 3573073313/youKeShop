@@ -1,0 +1,451 @@
+/**index.wxss**/
+page {
+	background-color: #fff;
+}
+
+/* 移动托块样式层编写 */
+.indexMoveFather {
+	width: 100%;
+	height: 200rpx;
+	background-color: #FFF;
+	position: absolute;
+	right: 10rpx;
+	bottom: 30rpx;
+	z-index: 9999;
+}
+
+.indexMove {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 0rpx;
+	right: 0rpx;
+	background: transparent;
+	z-index: 999;
+}
+
+/* 搜索样式编写 */
+.searchIndex {
+	width: 100%;
+	height: 100rpx;
+	background-color: #fff;
+	position: sticky;
+	top: 0rpx;
+	z-index: 99999;
+}
+
+.box {
+	margin: 20rpx 0;
+}
+
+.box view.cu-bar {
+	margin-top: 20rpx;
+}
+
+.bg-ef2a28 {
+	background-color: #ef2a28;
+}
+
+
+
+
+/* swiper style start */
+.indexSwiper {
+	width: 100%;
+	height: 370rpx;
+	background-color: transparent;
+}
+
+.swiperContStyle {
+	width: 100%;
+	height: 370rpx;
+}
+
+.swiper-item {
+	width: 100%;
+	height: 370rpx;
+}
+
+.swiper-item>image {
+	width: 100%;
+	height: 370rpx;
+}
+
+/* 分类类目Style编写 */
+.indexNavTo {
+	width: 100%;
+	height: auto;
+	/* background-color: #f90; */
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	margin-top: 20rpx;
+	padding-bottom: 20rpx;
+}
+
+.indexNavToLi {
+	width: 20%;
+	height: 140rpx;
+	/* background-color: #f10; */
+	float: left;
+	text-align: center;
+}
+
+.indexNavToLiIcon {
+	width: 80rpx;
+	height: 80rpx;
+	background-color: transparent;
+	margin: 0 auto;
+	margin-top: 10rpx;
+	text-align: center;
+	line-height: 70rpx;
+}
+
+.indexNavToLiIcon>image {
+	width: 100%;
+	height: 100%;
+}
+
+.indexNavToLi>text {
+	font-size: 26rpx;
+}
+
+/* 首页广告位编写样式开始 */
+.indexAdvertisement {
+	width: 100%;
+	height: 200rpx;
+	background-color: #FFF;
+	padding: 10rpx 30rpx;
+}
+
+.indexAdvertisement>image {
+	width: 100%;
+	height: 100%;
+}
+
+
+/* 产品秒杀样式编写 */
+.indexSeckill {
+	width: 100%;
+	height: 370rpx;
+	background-color: transparent;
+	/* margin-bottom: 30rpx; */
+	overflow: hidden;
+}
+
+.indexSeckillContent {
+	width: 92%;
+	height: 308rpx;
+	background-color: #FFF;
+	margin: 0 auto;
+	margin-top: 30rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+	box-shadow: 0rpx 0rpx 10rpx #e0e0e0;
+}
+
+.indexSeckillContentTitle {
+	width: 100%;
+	height: 80rpx;
+	background-color: #FFF;
+	font-size: 30rpx;
+	line-height: 85rpx;
+	color: #ef2a28;
+	font-weight: bold;
+	overflow: hidden;
+	padding: 0rpx 20rpx;
+}
+
+
+
+.titleFlex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.timeContent {
+	width: 215rpx;
+	height: 40rpx;
+	background-color: #fff;
+	border: 2rpx solid #ef2a28;
+	box-sizing: content-box;
+	padding: 0rpx 20rpx;
+	color: #FFF;
+	border-radius: 40rpx;
+	margin-top: 22rpx;
+	line-height: 15rpx;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.Times {
+	width: 120rpx;
+	height: 50rpx;
+	background-color: #ef2a28;
+	line-height: 45rpx;
+	float: left;
+	font-size: 24rpx;
+	margin-left: -22rpx;
+	text-align: center;
+}
+
+.bigs {
+	color: #ef2a28;
+}
+
+.downs {
+	background-color: midnightblue;
+}
+
+.timePro {
+	width: 200rpx;
+	height: 50rpx;
+	background-color: darkred;
+}
+
+.indexSeckillContentMain {
+	height: 230rpx;
+	/* background-color: pink; */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.indexSeckillContentMain>scroll-view {
+	height: 210rpx;
+	display: flex;
+	flex-direction: row;
+	white-space: nowrap;
+}
+
+.indexSeckillContentMainLi {
+	width: 145rpx;
+	height: 210rpx;
+	background-color: #FFF;
+	margin-right: 10rpx;
+	flex-shrink: 0;
+}
+
+.indexSeckillContentMainLiImg {
+	width: 145rpx;
+	height: 145rpx;
+	background-color: transparent;
+	text-align: center;
+}
+
+.indexSeckillContentMainLiImg>image {
+	width: 90%;
+	height: 90%;
+	margin-top: 6rpx;
+}
+
+.indexSeckillContentMainLiMoeny {
+	width: 145rpx;
+	height: 70rpx;
+	color: #ef2a28;
+	font-size: 28rpx;
+	text-align: center;
+}
+
+.MoneyNoTwo {
+	height: 30rpx;
+	line-height: 15rpx;
+	font-size: 20rpx;
+	text-decoration: line-through;
+	color: #999;
+}
+
+/* 三大类目 */
+
+.IndexThreeCont {
+	width: 100%;
+	height: 335rpx;
+}
+
+.IndexThreeImg {
+	width: 92%;
+	height: 300rpx;
+	background-color: #fff;
+	margin-bottom: 30rpx;
+	margin: 0 auto;
+	border-radius: 20rpx;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	box-shadow: 0rpx 0rpx 10rpx #e0e0e0;
+}
+
+.IndexThreeImg>view {
+	width: 200rpx;
+	height: 300rpx;
+	text-align: center;
+	/* background-color: red; */
+}
+
+.IndexThreeTitle {
+	width: 100%;
+	height: 50rpx;
+	line-height: 50rpx;
+	font-weight: bold;
+	text-align: left;
+	/* background-color: pink; */
+	font-size: 30rpx;
+	margin-top: 20rpx;
+}
+
+.IndexThreeTitle>text {
+	padding-left: 20rpx;
+}
+
+.IndexThreeTitleF {
+	width: 100%;
+	height: 40rpx;
+	font-size: 26rpx;
+	/* background-color: rgb(153, 18, 3); */
+	line-height: 40rpx;
+	text-align: left;
+}
+
+.IndexThreeTitleF>text {
+	padding-left: 20rpx;
+}
+
+.IndexThreeTitleImg {
+	width: 160rpx;
+	height: 160rpx;
+	/* background-color: seagreen; */
+	margin: 0 auto;
+	margin-top: 10rpx;
+}
+
+.IndexThreeTitleImg>image {
+	width: 100%;
+	height: 100%;
+	border-radius: 10rpx;
+}
+
+/* 产品列表样式编写开始 */
+.productList {
+	width: 100%;
+	height: auto;
+	background-color: transparent;
+}
+
+/* 推荐列表样式编写开始 */
+.productListRecommend {
+	width: 100%;
+	height: auto;
+	background-color: #fafafa;
+	padding-bottom: 30rpx;
+}
+
+.productListPublicTitle {
+	width: 100%;
+	height: 100rpx;
+	text-align: center;
+	font-size: 36rpx;
+	line-height: 100rpx;
+	color: #333;
+	font-weight: bold;
+}
+
+/* 内容层 */
+.productListRecommendCont {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+.productListRecommendContsSuccess {
+	width: 92%;
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: space-between;
+	padding-top: 30rpx;
+}
+
+.productListRecommendContsSuccessClass {
+	width: 48%;
+	height: auto;
+	background-color: #FFF;
+	border-radius: 20rpx;
+	box-shadow: 0rpx 0rpx 10rpx #e0e0e0;
+	margin-bottom: 26rpx;
+}
+
+.productListRecommendContsSuccessClassImg {
+	width: 280rpx;
+	height: 280rpx;
+	background-color: transparent;
+	margin: 0 auto;
+	margin-top: 25rpx;
+}
+
+.productListRecommendContsSuccessClassImg>image {
+	width: 100%;
+	height: 100%;
+}
+
+.productListRecommendContsSuccessClassTitle {
+	width: 85%;
+	height: 72rpx;
+	background-color: #FFF;
+	margin: 0 auto;
+	word-break: break-all;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	margin-top: 16rpx;
+}
+
+.productListRecommendContsSuccessClassTitle>text {
+	padding-left: 4rpx;
+}
+
+.productListRecommendContsSuccessClassMoney {
+	width: 85%;
+	height: 60rpx;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 60rpx;
+	font-weight: 500;
+	color: #ef2a28;
+	font-size: 30rpx;
+}
+
+.productListRecommendContsSuccessClassGuarantee {
+	font-size: 28rpx;
+	color: #ef2a28;
+}
+
+/* 无数据样式编写 */
+.productListRecommendContsError {
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+	/* background-color: #f90; */
+	margin: 0 auto;
+	font-size: 30rpx;
+	text-align: center;
+	padding: 50rpx;
+	color: #bfbfbf;
+}
+
+
+/* 版权信息样式层 */
+.copyrightClass {
+	width: 90% !important;
+	height: 100rpx;
+	/* background-color: red; */
+	margin: 0 auto;
+}

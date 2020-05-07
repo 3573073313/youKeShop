@@ -1,0 +1,180 @@
+<!--pages/product_detail/product_detail.wxml-->
+<view class="product_Detail">
+	<!-- 产品swiper轮播图片 + 转发 -->
+	<view class="product_DetailImg">
+		<swiper class="swiper-box" circular="true" indicator-dots="true" autoplay="true" interval="3000" indicator-color="#FFF" indicator-active-color="#ef2a28">
+			<block wx:for="{{productSwiper}}" wx:key="index">
+				<swiper-item>
+					<view class="swiperImg">
+						<image src="{{item.productSwiperImg}}"></image>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<!-- 转发功能 -->
+		<view class="productForward">
+			<button open-type="share" class="ShareClass"></button>
+			<i-icon type="send" color="#fff" size="30" />
+		</view>
+		<!-- 转发功能 -->
+	</view>
+	<!-- 产品swiper轮播图片 + 转发 -->
+
+	<!-- 产品标题 + 副标题 + 价格 + 会员价格编写开始 -->
+
+	<view class="productInformation">
+		<!-- 主标题 -->
+		<view class="productInformationTitle">
+			<i-tag class="i-tags" name="{{item.ProductTypes}}" color="red" size="30">自营产品</i-tag>
+			<text style="padding-left: 10rpx;">小米10 5G手机骁龙865 1亿像素拍照智能游戏 小米官方旗舰店正品小米手机 XIAOMI</text>
+		</view>
+		<!-- 副标题 -->
+		<view class="productInformationSubheading">
+			<i-icon type="commodity" color="#999" size="24" />
+			<text>购机赠小米会员礼包 享10重礼</text>
+		</view>
+
+		<!-- 价格 + 会员价格 -->
+		<view class="productInformationMoney">
+			<view>
+				<text>￥<text>4980</text>.00</text>
+			</view>
+			<view class="productInformationMoneyVip">
+				<text>会员价 <text>4580</text>.00</text>
+			</view>
+		</view>
+	</view>
+	<!-- 产品标题 + 副标题 + 价格 + 会员价格编写结束 -->
+
+	<!-- 优惠券编写开始 -->
+	<view class="productCoupon">
+		<i-cell-group>
+			<i-cell title="领取优惠券" is-link bind:click="CouponDetailFun"></i-cell>
+			<i-toast id="toast" />
+		</i-cell-group>
+	</view>
+	<!-- 优惠券编写结束 -->
+
+	<!-- 产品保障 -->
+	<view class="productCoupon">
+		<i-cell-group>
+			<i-cell title="产品保障" is-link bind:click="handleOpen"></i-cell>
+			<i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel" bind:click="handleClickItem"></i-action-sheet>
+		</i-cell-group>
+	</view>
+	<!-- 产品保障 -->
+
+	<!-- 产品规格 -->
+	<view class="productSpecs">
+		<i-cell title="产品规格" is-link bind:click="CouponDetailFun"></i-cell>
+	</view>
+	<!-- 产品规格 -->
+
+	<!-- 产品详情 + 评价 -->
+	<view class="productDetile">
+		<!-- 顶部标题栏 -->
+		<view class="productDetileTitle" wx:key="index">
+			<view class="productDetileTitleCnt {{ActiveBgColor == 0 ? 'ActiveShow' : ''}}" data-index="0" bindtap="productDetileFun">
+				<text>商品详情</text>
+			</view>
+
+			<view class="productDetileTitleCnt {{ActiveBgColor == 1 ? 'ActiveShow' : ''}}" data-index="1" bindtap="productDetileFun">
+				<text>商品评价</text>
+			</view>
+		</view>
+		<!-- 顶部标题栏 -->
+		<!-- 详情 + 评价内容层栏目 -->
+		<view class="productDetileContent">
+			<!-- 详情 -->
+			<view class="productDetileContentSon {{ActiveBgColor == 0 ? 'productDetileContentSonShow' : 'productDetileContentSonHide'}}">
+				<!-- 不可删除 -->
+				<!-- <rich-text nodes="{{pruductDetailtest}}"></rich-text> -->
+				<!-- 不可删除 -->
+
+				<!-- 详情模拟图片请求成功后打开上边rich-text进行渲染 -->
+				<image mode="widthFix" wx:for="{{pruductDetailtest}}" wx:key="index" src="{{item.pruductDetailtestImg}}"></image>
+				<!-- 详情模拟图片请求成功后打开上边rich-text进行渲染 -->
+
+			</view>
+			<!-- 详情 -->
+			<!-- 评价 -->
+			<view class="productDetileContentSon {{ActiveBgColor == 1 ? 'productDetileContentSonShow' : 'productDetileContentSonHide'}}">
+				<!-- 单个用户进行评价 -->
+				<view class="productDetileContentSonEvaluate" wx:for="{{RateCont}}" wx:key="index">
+					<!-- 用户信息 + 评价时间 -->
+					<view class="ContentSonEvaluateLoginTime">
+						<view class="ContentSonEvaluateLoginCon">
+							<view class="ContentSonEvaluateLogin">
+								<image src="{{item.RateContLogin}}"></image>
+							</view>
+							<view>
+								<text>{{item.RateContName}}</text>
+							</view>
+						</view>
+						<view>
+							<text>{{item.RateContTime}}</text>
+						</view>
+					</view>
+					<!-- 用户信息 + 评价时间 -->
+					<view class="ContentSonEvaluateLoginLevel">
+						<i-rate i-class="rateColor" value="{{item.RateContLevel}}">{{item.RateContLevel}}星</i-rate>
+					</view>
+					<view class="ContentSonEvaluateLoginContent">
+						<text>{{item.RateContMain}}</text>
+					</view>
+				</view>
+				<!-- 单个用户进行评价 -->
+			</view>
+			<!-- 评价 -->
+		</view>
+		<!-- 详情 + 评价内容层栏目 -->
+	</view>
+
+	<!-- 产品详情 + 评价 -->
+
+	<!-- 购买 + 加入购物车 + 收藏 + 客服 -->
+	<view class="productPayment">
+		<view class="productPaymentIconLeft">
+
+			<view class="productPaymentIcon" bindtap="ServiceFun">
+				<view>
+					<i-icon type="interactive_fill" color="#2c2c2c" size='20' />
+				</view>
+				<view><text>客服</text></view>
+			</view>
+
+			<view class="productPaymentIcon" bindtap="ShopFun">
+				<view>
+					<i-icon type="service_fill" color="#2c2c2c" size='20' />
+				</view>
+				<view><text>店铺</text></view>
+			</view>
+
+			<view class="productPaymentIcon" bindtap="CollectionFun">
+				<view>
+					<i-icon type="like_fill" color="#2c2c2c" size='20' />
+				</view>
+				<view><text>收藏</text></view>
+			</view>
+
+		</view>
+		<view class="productPaymentShopRight">
+			<view class="AddShopColor" catchtap="AddCarShopFun">
+				<text>加入购物车</text>
+			</view>
+			<view class="BuyColor">
+				<text>立即购买</text>
+			</view>
+		</view>
+	</view>
+	<!-- 购买 + 加入购物车 + 收藏 + 客服 -->
+
+
+
+	<!-- 返回顶部编写开始 -->
+	<view class="WeChatTop" bindtap="goTop" hidden="{{!floorstatus}}">
+		<i-icon type="packup" color="#fff" size="26" />
+	</view>
+	<!-- 返回顶部编写结束 -->
+
+</view>

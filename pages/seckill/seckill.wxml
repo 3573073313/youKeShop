@@ -1,0 +1,65 @@
+<!--pages/seckill/seckill.wxml-->
+<view class="publicBg W100 seckillPage">
+
+	<!-- 秒杀轮播图 -->
+	<view class="W100 SwiperBg">
+		<swiper class="SwiperBg" indicator-dots="true" indicator-color="#fff" indicator-active-color="#ef2a28" autoplay="autoplay">
+			<block wx:for="{{seckillBanner}}" wx:for-item="seckill" wx:key="index">
+				<swiper-item class="seckillBanner">
+					<view class="seckillBanner">
+						<image src="{{seckill.seckillBanner_Img}}"></image>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<!-- 秒杀轮播图 -->
+
+	<!-- 分类秒杀 -->
+	<view class="seckillTitle W100">
+		<scroll-view class='scroll-box' enable-flex="true" scroll-x="true">
+			<view class="seckillTitleCont Flex Wauto">
+				<block wx:for="{{seckillContent}}" wx:key="index">
+					<view class="seckillTitleContSon" data-index="{{index}}" bindtap="seckillFun">
+						<text>{{item.ProductClassification}}</text>
+					</view>
+				</block>
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="seckillContent">
+		<!-- 单个产品块 -->
+		<block wx:for="{{seckillContent[IndexShow].Product}}" wx:key="index">
+			<view class="seckillContentSun Flex">
+				<!-- 秒杀标签 -->
+				<view class="seckillLable">
+					<text>秒</text>
+				</view>
+				<!-- 秒杀标签 -->
+				<view class="seckillContentSunImg">
+					<image src="{{item.ProductImg}}"></image>
+				</view>
+				<view class="seckillContentSunCont">
+					<view class="seckillContentSunContTitle">
+						<text>{{item.ProductTitle}}</text>
+					</view>
+					<view style="height: 10rpx;"></view>
+					<view><text style="font-size: 30rpx; color: #ef2a28;">￥<text style="font-size: 50rpx; font-weight: bold; color: #ef2a28;">{{item.ProductPrice}}</text> <text style="	text-decoration: line-through; color: #333;font-size: 30rpx; ">￥{{item.ProductMoenyOriginalPrice}}</text> </text></view>
+					<view style="height: 10rpx;"></view>
+					<view class="seckillBtn" catchtap="seckillButton" data-id="{{index}}">
+						<view>
+							<text>去抢购</text>
+						</view>
+						<view style="line-height: 17rpx; margin-left: 14rpx;">
+							<i-count-down target="{{targetTime}}" i-class="TimeStyle" clear-timer="{{clearTimer}}"></i-count-down>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+		<!-- 单个产品块 -->
+	</view>
+	<!-- 分类秒杀 -->
+</view>

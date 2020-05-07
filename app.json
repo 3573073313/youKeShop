@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/personal/personal",
+    "pages/shopcar/shopcar",
+    "pages/product_detail/product_detail",
+    "pages/seckill/seckill",
+    "pages/seckill_detail/seckill_detail",
+    "pages/assemble/assemble",
+    "pages/assemble_detail/assemble_detail",
+    "pages/shopStreet/shopStreet",
+    "pages/shopStreet_detail/shopStreet_detail",
+    "pages/store_information/store_information",
+    "pages/login_people/login_people",
+    "pages/Integral_mall/Integral_mall",
+    "pages/ranking/ranking",
+    "pages/daily_specials/daily_specials",
+    "pages/live/live",
+    "pages/live_detail/live_detail",
+    "pages/brand_Purchase/brand_Purchase"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ef2a28",
+    "navigationBarTitleText": "优客商城",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "i-button": "../../dist/button/index",
+    "i-notice-bar": "../../dist/notice-bar/index",
+    "i-icon": "../../dist/icon/index",
+    "i-grid": "../../dist/grid/index",
+    "i-grid-item": "../../dist/grid-item/index",
+    "i-grid-icon": "../../dist/grid-icon/index",
+    "i-grid-label": "../../dist/grid-label/index",
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-tag": "../../dist/tag/index",
+    "i-count-down": "../../dist/count-down/index",
+    "i-divider": "../../dist/divider/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-toast": "../../dist/toast/index",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-rate": "../../dist/rate/index",
+    "i-input-number": "../../dist/input-number/index",
+    "i-checkbox-group": "../../dist/checkbox-group/index",
+    "i-checkbox": "../../dist/checkbox/index",
+    "i-sticky": "../../dist/sticky/index",
+    "i-sticky-item": "../../dist/sticky-item/index",
+    "i-input": "../../dist/input/index",
+    "like-fx": "./likeFx/likeFx"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#ef2a28",
+    "list": [
+      {
+        "iconPath": "/images/icon/home.png",
+        "selectedIconPath": "/images/icon/homeUp.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "/images/icon/FenLei.png",
+        "selectedIconPath": "/images/icon/FenLeiUp.png",
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "iconPath": "/images/icon/live.png",
+        "selectedIconPath": "/images/icon/liveUp.png",
+        "pagePath": "pages/live/live",
+        "text": "直播"
+      },
+      {
+        "iconPath": "/images/icon/CarShop.png",
+        "selectedIconPath": "/images/icon/CarShopUp.png",
+        "pagePath": "pages/shopcar/shopcar",
+        "text": "购物车"
+      },
+      {
+        "iconPath": "/images/icon/Vip.png",
+        "selectedIconPath": "/images/icon/VipUp.png",
+        "pagePath": "pages/personal/personal",
+        "text": "我的"
+      }
+    ]
+  }
+}

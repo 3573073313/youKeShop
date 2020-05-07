@@ -1,0 +1,39 @@
+<!--pages/live/live.wxml-->
+<view class="LivePages">
+	<view class="LivePagesSon mt20" catchtap="LiveFun" wx:for="{{live}}" wx:key="*this">
+		<!-- 封面 -->
+		<image mode="aspectFill" src="{{item.liveBgImg}}"></image>
+		<!-- 封面 -->
+		<!-- 直播内容 -->
+		<view class="livePagesSonCont">
+			<!-- 直播状态 -->
+			<view class="liveState FlexD mt30">
+				<view class="liveStateTitle">
+					<text wx:if="{{item.liveState == 0}}">直播中</text>
+					<text wx:elif="{{item.liveState == 1}}">待直播</text>
+					<text wx:if="{{item.liveState == 2}}">直播结束</text>
+				</view>
+				<view class="liveStateMen">
+					<i-icon type="mine" color="#fff" size="18"/><text>{{item.liveNum}}</text></view>
+			</view>
+			<!-- 直播状态 -->
+
+			<!-- 直播信息 -->
+			<view class="liveTitle">
+				<view class="liveTitleTitles TxtHide">
+					<text>{{item.liveTitle}}</text>
+				</view>
+				<view class="liveTitleMain FlexD">
+					<view class="liveTitleMainImg Ohidden mr10">
+						<image src="{{item.liveShopImg}}"></image>
+					</view>
+					<view class="liveTitleMainName">
+						<text>{{item.liveShopTitle}}</text>
+					</view>
+				</view>
+			</view>
+			<!-- 直播信息 -->
+		</view>
+		<!-- 直播内容 -->
+	</view>
+</view>

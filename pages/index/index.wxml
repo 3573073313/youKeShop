@@ -1,0 +1,225 @@
+<!--index.wxml-->
+<!-- 搜索栏目开始编写 -->
+<view class="searchIndex">
+	<view class="cu-bar search bg-ef2a28">
+		<view class="search-form round">
+			<text class="cuIcon-search"></text>
+			<input type="text" placeholder="点击搜索您喜欢的产品" confirm-type="search"></input>
+		</view>
+	</view>
+</view>
+
+<!-- 搜索栏目编写完毕 -->
+
+
+<!-- 轮播图页面编写开始 -->
+<view class="indexSwiper">
+	<swiper class="swiperContStyle swiper-box" circular="true" indicator-active-color="#FFF" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{image}}" wx:key="*this">
+			<swiper-item>
+				<view class="swiper-item {{item}}">
+					<image src="{{item.imageUrl}}"></image>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<!-- 轮播图页面编写完毕 -->
+
+<!-- 公告栏目组件开始 -->
+<i-notice-bar icon="integral_fill" speed="5000">
+	{{title}}
+</i-notice-bar>
+<!-- 公告栏目组件完毕 -->
+
+<!-- 分类类目组件开始 需要代码自定义编写 -->
+<view class="indexNavTo">
+	<!-- 分类小组件开始 -->
+	<view class="indexNavToLi" wx:for="{{NavTo}}" wx:key="index" data-index="{{index}}" bindtap="{{item.NavToUrl}}">
+		<view class="indexNavToLiIcon">
+			<image src="{{item.NavToIcon}}"></image>
+		</view>
+		<text>{{item.NavToTxt}}</text>
+	</view>
+	<!-- 分类小组件完毕 -->
+</view>
+
+<!-- 分类类目组件结束 需要代码自定义编写 -->
+
+<!-- 广告位编写开始 -->
+
+<view class="indexAdvertisement" bindtap="AdverNavFun">
+	<image src="https://group.dmeit.cn/ggimg.png"></image>
+</view>
+
+<!-- 广告位编写完毕 -->
+
+<!-- 产品秒杀 -->
+
+<view class="indexSeckill">
+	<view class="indexSeckillContent">
+		<!-- 秒杀标题 -->
+		<view class="indexSeckillContentTitle titleFlex">
+			<view>
+				<i-icon type="flashlight_fill" size="24" color="#ef2a28" />
+				<text>产品秒杀</text>
+			</view>
+			<view class="timeContent">
+				<view class="Times"><text>10点场</text></view>
+				<view style="margin-left: 20rpx; font-size: 24rpx;">
+					<i-count-down countdown-class="bigs" target="{{targetTime}}" clear-timer="{{clearTimer}}"></i-count-down>
+				</view>
+			</view>
+		</view>
+		<!-- 秒杀标题 -->
+
+		<!-- 秒杀内容 -->
+		<view class="indexSeckillContentMain">
+			<scroll-view enable-flex="true" scroll-x="true">
+				<!-- 产品 -->
+				<view class="indexSeckillContentMainLi" bindtap="SeckillFun" wx:for="{{SeckillProduct}}" wx:key="index">
+					<!-- 产品图片 -->
+					<view class="indexSeckillContentMainLiImg">
+						<image src="{{item.SeckillImg}}"></image>
+					</view>
+					<!-- 产品图片 -->
+
+					<!-- 价格 -->
+					<view class="indexSeckillContentMainLiMoeny">
+						<text>￥{{item.SeckillMoney}}</text>
+						<view class="MoneyNoTwo">
+							<text>￥{{item.SeckillMoneyP}}</text>
+						</view>
+					</view>
+					<!-- 价格 -->
+				</view>
+				<!-- 产品 -->
+				<!-- 查看更多 -->
+
+				<view class="indexSeckillContentMainLi" style="background-color: transparent; line-height: 205rpx;" bindtap="SeckillMore">
+					<text>查看更多</text>
+					<i-icon type="enterinto_fill" />
+				</view>
+
+				<!-- 查看更多 -->
+			</scroll-view>
+		</view>
+		<!-- 秒杀内容 -->
+
+	</view>
+</view>
+
+<!-- 产品秒杀 -->
+
+<view class="IndexThreeCont">
+	<view class="IndexThreeImg">
+		<!-- 排行榜 -->
+		<view bindtap="rankingFun">
+			<view class="IndexThreeTitle">
+				<text>排行榜</text>
+			</view>
+			<view class="IndexThreeTitleF"><text>跟榜够好物</text></view>
+			<view class="IndexThreeTitleImg">
+				<image src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/3626596873/O1CN01KmxFCP20dskrOt7Kz_!!3626596873-0-lubanu-s.jpg_250x250.jpg"></image>
+			</view>
+		</view>
+		<!-- 排行榜 -->
+
+			<!-- 每日特价 -->
+			<view bindtap="specialFun">
+				<view class="IndexThreeTitle">
+					<text>每日特价</text>
+				</view>
+				<view class="IndexThreeTitleF"><text>疯抢购物把</text></view>
+				<view class="IndexThreeTitleImg">
+					<image src="https://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2863054326/O1CN0134VR8u1hpLyMrqwcZ_!!0-item_pic.jpg_250x250.jpg"></image>
+				</view>
+			</view>
+			<!-- 每日特价 -->
+
+			<!-- 今日拼团 -->
+			<view bindtap="assembleFun">
+				<view class="IndexThreeTitle">
+					<text>今日拼团</text>
+				</view>
+				<view class="IndexThreeTitleF"><text>叫朋友一起拼</text></view>
+				<view class="IndexThreeTitleImg">
+					<image src="https://g-search3.alicdn.com/img/bao/uploaded/i4/i4/738840638/O1CN01qygHFk1GaFH4iQIM0_!!0-item_pic.jpg_250x250.jpg"></image>
+				</view>
+			</view>
+			<!-- 今日拼团 -->
+
+		</view>
+	</view>
+
+
+	<!-- 排行榜 + 每日特价 + 今日拼团 -->
+
+
+	<!-- 产品列表编写开始 子类分为最新推荐 + 秒杀 + 拼团 -->
+
+	<view class="productList">
+
+		<!-- 最新推荐栏目编写开始 -->
+		<view class="productListRecommend">
+			<view class="productListRecommendCont">
+				<!-- 如果数据中有商品就显示 -->
+				<view class="productListRecommendContsSuccess" wx:if="{{Product.length != 0}}">
+					<view class="productListRecommendContsSuccessClass" wx:for="{{Product}}" wx:key="index" bindtap="ProductImg" data-index="{{index}}">
+						<!-- 产品图片 -->
+						<view class="productListRecommendContsSuccessClassImg">
+							<image src="{{item.ProductImg}}"></image>
+						</view>
+						<!-- 产品图片 -->
+
+						<!-- 产品标题 -->
+						<view class="productListRecommendContsSuccessClassTitle">
+							<i-tag class="i-tags" name="{{item.ProductTypes}}" color="red">{{item.ProductTypes}}</i-tag>
+							<text>{{item.ProductTitle}}</text>
+						</view>
+						<!-- 产品标题 -->
+
+						<!-- 产品价格 -->
+						<view class="productListRecommendContsSuccessClassMoney">
+							<text><text style="font-size: 30rpx;">￥</text>{{item.ProductMoney}}</text>
+						</view>
+						<!-- 产品价格 -->
+
+						<!-- 保障 -->
+						<!-- <view class="productListRecommendContsSuccessClassGuarantee productListRecommendContsSuccessClassMoney">
+						<i-icon type="transaction_fill" color="#ef2a28" size="24" />
+						<text>{{item.ProductGuarantee}}</text>
+					</view> -->
+						<!-- 保障 -->
+
+					</view>
+				</view>
+
+				<!-- 如果没有产品就显示不存在 -->
+				<view class="productListRecommendContsError" wx:else="">
+					<view>
+						<view class="cu-avatar xl round" style="background-image:url(https://group.dmeit.cn/errorProduct.png); background-color: transparent;"></view>
+					</view>
+					<text>暂无产品数据</text>
+				</view>
+
+			</view>
+		</view>
+		<!-- 最新推荐栏目编写完毕 -->
+
+	</view>
+
+
+	<!-- 产品列表编写完毕 -->
+
+	<!-- 返回顶部编写开始 -->
+
+	<view class="WeChatTop" bindtap="goTop" hidden="{{!floorstatus}}">
+		<i-icon type="packup" color="#fff" size="26" />
+	</view>
+
+	<!-- 返回顶部编写结束 -->
+
+	<!-- 底部版权信息编写开始 -->
+	<i-divider content="济南优客 © 版权所有" i-class="copyrightClass" color="#e0e0e0" lineColor="#e0e0e0"></i-divider>
+	<!-- 底部版权信息编写结束 -->

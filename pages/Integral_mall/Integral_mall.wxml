@@ -1,0 +1,108 @@
+<!--pages/Integral_mall/Integral_mall.wxml-->
+<view class="IntegralPage">
+	<!-- swiper -->
+	<view class="IntegralPageSwiper">
+		<view class="IntegralPageSwiperBtm"></view>
+		<view class="IntegralPageSwiperSon">
+			<swiper indicator-dots="true" indicator-color="#fff" indicator-active-color="#f90">
+				<swiper-item class="Img" wx:for="{{Swiper}}">
+					<image src="{{item.SwiperImg}}"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+	</view>
+	<!-- swiper -->
+
+	<!-- 兑换优惠券 -->
+	<view class="mallCoupon">
+		<view class="mallTitlePublic">
+			<view>
+				<view class="mallTitlePublicIcon"></view>
+				<view>
+					<text>兑换优惠券</text>
+				</view>
+			</view>
+			<view>
+				<text>更多</text>
+				<i-icon type="enterinto" size="20" />
+			</view>
+		</view>
+
+		<view class="mallCont">
+			<view class="mallContSon">
+				<view class="mallContSonTitle">
+					<view>满<text>2000</text>元</view>
+					<view>立减<text>200</text></view>
+				</view>
+				<view class="mallContSonBtn">
+					<view class="mallBtn">
+						<text>立即兑换</text>
+					</view>
+				</view>
+			</view>
+
+			<view class="mallContSon">
+				<view class="mallContSonTitle">
+					<view>满<text>2000</text>元</view>
+					<view>立减<text>200</text></view>
+				</view>
+				<view class="mallContSonBtn">
+					<view class="mallBtn">
+						<text>立即兑换</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 兑换优惠券 -->
+
+	<!-- 兑换产品 -->
+
+	<view class="mallProduct">
+		<view class="mallTitlePublic">
+			<view>
+				<view class="mallTitlePublicIcon"></view>
+				<view>
+					<text>兑换产品</text>
+				</view>
+			</view>
+
+			<view>
+				<text>更多</text>
+				<i-icon type="enterinto" size="20" />
+			</view>
+
+		</view>
+		<view class="mallProductCont FlexD">
+			<view class="BgShow">
+				<!-- 产品图 -->
+				<view class="mallProductContImg">
+					<image src="https://g-search2.alicdn.com/img/bao/uploaded/i4/i1/704957370/O1CN01uYQwJM24JVbQ1DsB4_!!704957370-0-pixelsss.jpg_250x250.jpg"></image>
+				</view>
+				<!-- 产品图 -->
+
+				<!-- 标题 -->
+				<view class="mallProductContTitle">
+					<text>匡匡悲催债</text>
+				</view>
+				<!-- 标题 -->
+
+				<!-- 积分 -->
+				<view class="mallProductContPeople">
+					<text>500</text>积分
+				</view>
+				<!-- 积分 -->
+
+				<!-- 兑换按钮 -->
+				<view class="mallProductContBtn">
+					<text>立即兑换</text>
+				</view>
+				<!-- 兑换按钮 -->
+
+			</view>
+		</view>
+
+	</view>
+
+	<!-- 兑换产品 -->
+</view>

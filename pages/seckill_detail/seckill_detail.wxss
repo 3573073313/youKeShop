@@ -1,0 +1,13 @@
+/* pages/seckill_detail/seckill_detail.wxss */
+@import "/pages/product_detail/product_detail.wxss";
+.seckill {
+	width: 100%;
+	height: auto;
+	background-color: #fafafa;
+}
+
+.seckill_Swiper {
+	width: 100%;
+	height: 750rpx;
+	background-color: #f80;
+}

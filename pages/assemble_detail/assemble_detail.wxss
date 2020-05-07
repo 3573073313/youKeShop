@@ -1,0 +1,3 @@
+/* pages/assemble_detail/assemble_detail.wxss */
+@import "../seckill_detail/seckill_detail.wxss";
+

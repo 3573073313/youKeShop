@@ -1,0 +1,166 @@
+<!--pages/login_people/login_people.wxml-->
+<view class="LoginPeoplePage">
+	<!-- 我的余额 -->
+	<view class="publicBg LoginPeoplePageList {{NavIndex == 0 ? 'LoginPeoplePageListShow' : ''}}">
+		<!-- 当前余额 + 已经消费 -->
+		<view class="LoginPeoplePageListInformaction">
+			<view class="ListInformactionTitle">总资产(元)</view>
+			<view class="ListInformactionPeople"><text>123,456,789.00</text></view>
+			<view style="height: 40rpx;"></view>
+			<view class="ListInformactionTitle">总消费(元)</view>
+			<view class="ListInformactionPeople"><text>9,999,999.00</text></view>
+		</view>
+		<!-- 当前余额 + 已经消费 -->
+
+		<!-- 点击充值金额 -->
+		<i-button bind:click="handleClick" type="error" shape="circle" size="small">金额充值</i-button>
+		<!-- 点击充值金额 -->
+
+		<!-- 三大记录 + 消费记录 + 账单记录 + 积分商城 -->
+
+		<view class="LoginPeoplePageThree BgShow">
+			<view>
+				<view>
+					<i-icon type="activity" size="30" />
+				</view>
+				<view><text>账单记录</text></view>
+			</view>
+			<view>
+				<view>
+					<i-icon type="createtask" size="30" />
+				</view>
+				<view><text>消费记录</text></view>
+			</view>
+			<!-- <view>
+				<view>
+					<i-icon type="flag" size="30" />
+				</view>
+				<view><text>积分中心</text></view>
+			</view> -->
+		</view>
+
+		<!-- 三大记录 + 消费记录 + 账单记录 + 积分商城 -->
+
+		<!-- 签到领取积分 + 领取优惠券 -->
+
+		<view class="LoginPeoplePageTwoYq">
+			<view>
+				<image src="https://group.dmeit.cn/lingquan.jpg"></image>
+			</view>
+			<view>
+				<image src="https://group.dmeit.cn/qiandao.jpg"></image>
+			</view>
+		</view>
+
+		<!-- 签到领取积分 + 领取优惠券 -->
+
+		<view class="PublicTitle">
+			<text>产品推荐</text>
+		</view>
+
+		<!-- 产品推荐 -->
+		<view class="productList">
+
+			<!-- 产品 -->
+			<view wx:for="{{productList}}" catchtap="ProductFun" class="productListSon">
+				<view class="productListSonImg">
+					<image src="{{item.productListImg}}"></image>
+				</view>
+				<view class="flexLayout">
+					<view class="productListSonTitle">
+						<text>{{item.productListTitles}}</text>
+					</view>
+					<view class="productListSonPeople">
+						<view class="font34">
+							￥<text>{{item.productListProple}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 产品 -->
+		</view>
+		<!-- 产品推荐 -->
+	</view>
+	<!-- 我的余额 -->
+
+	<view class="LoginPeoplePageList  {{NavIndex == 1 ? 'LoginPeoplePageListShow' : ''}}">
+		<!-- 当前余额 + 已经消费 -->
+		<view class="LoginPeoplePageListInformaction" style="background-image: url(https://group.dmeit.cn/yuersJiFenBg.jpg);">
+			<view class="ListInformactionTitle">总积分(分)</view>
+			<view class="ListInformactionPeople"><text>26056</text></view>
+			<view style="height: 40rpx;"></view>
+			<view class="ListInformactionTitle">总消费(分)</view>
+			<view class="ListInformactionPeople"><text>16662</text></view>
+		</view>
+		<!-- 当前余额 + 已经消费 -->
+
+		<!-- 点击充值金额 -->
+		<!-- <i-button bind:click="handleClick" type="error" shape="circle" size="small">金额充值</i-button> -->
+		<!-- 点击充值金额 -->
+
+		<!-- 三大记录 + 消费记录 + 账单记录 + 积分商城 -->
+
+		<view class="LoginPeoplePageThree BgShow">
+			<view>
+				<view>
+					<i-icon type="activity" size="30" />
+				</view>
+				<view><text>领取记录</text></view>
+			</view>
+			<view>
+				<view>
+					<i-icon type="createtask" size="30" />
+				</view>
+				<view><text>消费记录</text></view>
+			</view>
+			<view catchtap="IntegralFun">
+				<view>
+					<i-icon type="service" size="30" />
+				</view>
+				<view><text>积分商城</text></view>
+			</view>
+		</view>
+
+		<!-- 三大记录 + 消费记录 + 账单记录 + 积分商城 -->
+
+		<view class="PublicTitle">
+			<text>兑换推荐</text>
+		</view>
+
+		<!-- 产品推荐 -->
+		<view class="productList">
+
+			<!-- 产品 -->
+			<view wx:for="{{productList}}" catchtap="ProductFun" class="productListSon">
+				<view class="productListSonImg">
+					<image src="{{item.productListImg}}"></image>
+				</view>
+				<view class="flexLayout">
+					<view class="productListSonTitle">
+						<text>{{item.productListTitles}}</text>
+					</view>
+					<view class="productListSonPeople">
+						<view class="font34">
+							<text>{{item.productListProple}}</text>积分
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 产品 -->
+		</view>
+		<!-- 产品推荐 -->
+
+	</view>
+
+	<!-- 顶部导航 金额 + 积分-->
+	<view class="LoginPeoplePageNav">
+		<view class="LoginPeoplePageNavList {{NavIndex == index ? 'NavColor' : ''}}" wx:for="{{LoginPeoplePageNavList}}" data-index="{{index}}" catchtap="NavFun">
+			<view>
+				<i-icon type="{{item.icon}}" size="24" />
+			</view>
+			<text>{{item.LoginPeoplePageNavListTitle}}</text>
+		</view>
+	</view>
+	<!-- 顶部导航 金额 + 积分 -->
+
+</view>

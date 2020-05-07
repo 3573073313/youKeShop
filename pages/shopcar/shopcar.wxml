@@ -1,0 +1,114 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class="ShoppingCar">
+
+	<!-- 购物车产品 + 推荐产品 -->
+
+	<!-- 购物车产品 -->
+
+	<view class="ShoppingProduct">
+		<!-- 如果没有产品显示区域 -->
+		<view class="ShoppingProductError" wx:if="{{ShoppigProduct == ''}}">
+			<view>
+				<image src="https://group.dmeit.cn/shoppingErrors.png"></image>
+			</view>
+			<view>
+				<text style="color: #333;">空空的购物车，啥也没有...</text>
+			</view>
+			<view class="GoShopHome" bindtap="GoShopFun">
+				<text>去购物</text>
+			</view>
+		</view>
+		<!-- 如果没有产品显示区域 -->
+
+
+
+		<!-- 如果有产品显示区域 -->
+		<view class="ShoppingProductSuccess" wx:else>
+			<!-- 产品编辑 -->
+			<view class="edit stickyClass" id="affix">
+				<view>
+					<view class="{{OnShow == true ? 'CarTitleShow' : 'CarTitleHide'}}">
+						<text>优客商城(ulkerit.com)</text>
+					</view>
+					<view class="{{OnShow == false ? 'CarTitleShow' : 'CarTitleHide'}}"></view>
+				</view>
+				<view bindtap="editFun">
+					<text>{{editTitle == true ? '编辑' : '取消编辑'}}</text>
+				</view>
+			</view>
+			<!-- 产品编辑 -->
+
+			<!-- 单个产品 -->
+			<view class="ShoppingProductErrorSon" wx:for="{{ShoppigProduct}}" wx:key="index">
+				<view class="ChenStyle">
+					<checkbox value="" checked="{{checkedTrue}}" data-index="{{index}}" bindtap="ChenckFun" />
+				</view>
+				<view class="ShoppingProductErrorSonImg">
+					<image src="{{item.ShoppigProduct_Img}}"></image>
+				</view>
+				<view class="ShoppingProductErrorSonCont">
+					<view style="font-weight: bold; color: #000;"><text>{{item.ShoppigProduct_Title}}</text></view>
+					<view wx:for="{{item.ShoppigProduct_Specs}}" wx:key="index"><text>规格:{{item.ShoppigProduct_Specs_Model}}号，颜色:{{item.ShoppigProduct_Specs_colour}}</text></view>
+					<view class="MoneyIsCaoZ">
+						<view>
+							￥<text>{{item.ShoppigProduct_Moeny}}</text>元
+						</view>
+						<view>
+							<view class="AddNum">
+								<view bindtap="Cut" data-index="{{index}}">-</view>
+								<view><input type="text" value="{{item.ShoppigProduct_Num}}"></input></view>
+								<view bindtap="Add" data-index="{{index}}" data-num="{{item.ShoppigProduct_Num}}">+</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- 单个产品 -->
+
+		</view>
+		<!-- 如果有产品显示区域 -->
+
+	</view>
+
+	<!-- 购物车产品 -->
+
+	<!-- 购物车产品 + 推荐产品 -->
+
+
+
+	<!-- 购物车产品 + 推荐产品 -->
+
+	<!-- 购物操作 -->
+	<!-- 购买设置 -->
+	<view class="shopOperation {{ProductShop == true ? 'show' : 'hide'}}">
+		<view>
+			<checkbox value="" checked="{{whole}}" bindtap="wholeFun"></checkbox>
+			<text style="padding-left: 30rpx;">全选</text>
+		</view>
+
+		<view class="Settlement">
+			<view><text>总计:</text>￥<text>{{CarShopMoney}}</text></view>
+			<view class="SettlementBtn" bindtap=""><text>去结算{{ArrLength}}件</text></view>
+		</view>
+
+	</view>
+	<!-- 购买设置 -->
+
+	<!-- 删除设置 -->
+	<view class="shopOperation {{ProductShop == false ? 'show' : 'hide'}}">
+		<view>
+			<checkbox value="" checked=""></checkbox>
+			<text style="padding-left: 30rpx;">全选删除</text>
+		</view>
+
+		<view class="Settlement">
+			<view><text>已选中</text>10<text>件</text></view>
+			<view class="SettlementBtn" bindtap=""><text>立即删除10件</text></view>
+		</view>
+
+	</view>
+	<!-- 删除设置 -->
+
+	<!-- 购物操作 -->
+
+</view>

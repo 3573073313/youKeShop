@@ -1,0 +1,178 @@
+/* pages/shopStreet/shopStreet.wxss */
+
+.shopStreet {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+}
+
+/* 搜索 */
+.shopStreetSearch {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  position: sticky;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+/* 导航 */
+.shopStreetNav {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shopStreetNav view {
+  width: 25%;
+  padding: 0rpx 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 28rpx;
+}
+
+.showColor {
+  color: #ef2a28;
+  font-weight: bold;
+}
+
+/* 店铺街样式 */
+.shopStreetContent {
+  width: 100%;
+  height: auto;
+  padding: 0rpx 30rpx;
+  padding-bottom: 30rpx;
+}
+
+/* 单个店铺 */
+.shopStreetContentSon {
+  width: 100%;
+  height: 350rpx;
+  background-color: #fff;
+  margin-bottom: 30rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  padding: 10rpx 30rpx;
+  box-shadow: 0rpx 0rpx 10rpx #e0e0e0;
+}
+
+.shopStreetContentSonTitle {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shopStreetContentSonTitle>view {
+  display: flex;
+  flex-direction: row;
+}
+
+.shopStreetContentSonImg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  margin-right: 10rpx;
+}
+
+.shopStreetContentSonImg>image {
+  width: 100%;
+  height: 100%;
+}
+
+.shopStreetContentSonTitleDate {
+  width: auto;
+  height: 100rpx;
+}
+
+.shopStreetTitle {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.shopStreetXinXi {
+  display: flex;
+  flex-direction: row;
+}
+
+.EnterShop {
+  border: 2rpx solid #ef2a28;
+  box-sizing: border-box;
+  padding: 0rpx 20rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #ef2a28;
+  border-radius: 50rpx;
+  margin-top: 26rpx;
+  font-size: 26rpx;
+}
+
+.shopStreetContentSonMain {
+  width: 100%;
+  height: 170rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.shopStreetContentSonMainList {
+  width: 170rpx;
+  height: 170rpx;
+  background-color: #e1e1e1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.shopStreetContentSonMainList>image {
+  width: 100%;
+  height: 100%;
+}
+
+.ProductPeople {
+  width: auto;
+  height: 40rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  padding: 0rpx 10rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.shopStreetContentSonFenClass
+{
+  width: 100%;
+  height: 50rpx;
+  /* background-color: royalblue; */
+  margin-top: 15rpx;
+}
+
+.shopStreetContentSonFenClassSon
+{
+  width: auto;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0rpx 10rpx;
+  border: 2rpx solid #333;
+  box-sizing: border-box;
+  color: #333;
+  display: inline;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  margin-right: 20rpx;
+}

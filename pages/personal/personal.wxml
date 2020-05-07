@@ -1,0 +1,200 @@
+<!-- 总体个人中心编写开始 -->
+<view class="personalPage">
+	<!-- 获取用户信息编写开始 -->
+	<view class="personalPageLogin" wx:if="{{canIUse}}">
+		<!-- 可更改背景图片 720 * 500 -->
+		<image src="{{Login_Img_bg}}"></image>
+
+		<!-- 获取用户信息开始 -->
+		<view class="personalPageLoginCont">
+			<!-- 用户头像 -->
+			<view class="personalPageLoginImg">
+				<image src="https://group.dmeit.cn/bigboy.png" wx:if="{{UserSign != 1}}"></image>
+				<image src="{{userImg}}" wx:else></image>
+			</view>
+			<!-- 用户头像 -->
+
+			<!-- 点击获取用户信息编写开始 -->
+			<view class="personalPageLoginMagesInfo">
+				<view class="personalPageLoginMagesInfoName" wx:if="{{UserSign != 1}}">
+					<button class="btndiyStyle" bindgetuserinfo="UserInfoFun" data-sign="1" open-type="getUserInfo">点击授权登录</button>
+				</view>
+
+				<view class="personalPageLoginMagesInfoName" wx:else>
+					<view class="LoginTitle">
+						<text>{{userName}}</text>
+					</view>
+					<view class="LoginVip">
+						<i-icon type="integral_fill" size='18' />
+						<text>普通会员</text>
+					</view>
+				</view>
+
+				<!-- 签到功能 -->
+				<view wx:if="{{UserSign != 1}}"></view>
+
+				<view class="LoginSign" wx:else bindtap="SignFun">
+					<i-icon type="brush" size="15" />
+					<text>签到</text>
+				</view>
+				<!-- 签到功能 -->
+			</view>
+			<!-- 点击获取用户信息编写结束 -->
+		</view>
+		<!-- 获取用户信息结束 -->
+
+		<!-- 用户会员卡片 -->
+		<view class="LoginVipCard">
+
+			<view class="row">
+				<!-- 判断授权 -->
+				<view wx:if="{{UserSign != 1}}">
+					<view class="row">
+						<view>
+							<i-icon type="integral_fill" color="#DEB178" size="28" />
+						</view>
+						<view>
+							<text>请授权后查看会员状态</text>
+						</view>
+					</view>
+				</view>
+				<!-- 判断授权 -->
+
+				<!-- 授权完成 -->
+				<view class="OkayVip" wx:else>
+					<view class="row">
+						<view>
+							<i-icon type="integral_fill" color="#DEB178" size="28" />
+						</view>
+						<view>
+							<text>开通会员畅享8折特惠!!!</text>
+						</view>
+					</view>
+
+					<view class="OpeningVip" bindtap="LookVipFun">
+						<text>查看特权</text>
+					</view>
+				</view>
+				<!-- 授权完成 -->
+
+			</view>
+
+		</view>
+		<!-- 用户会员卡片 -->
+
+	</view>
+	<!-- 获取用户信息编写结束 -->
+
+	<!-- 订单信息模块 -->
+	<view class="personalOrder">
+		<view wx:for="{{OrderIcon}}" wx:key="index">
+			<view class="personalOrderImg">
+				<image mode="widthFix" src="{{item.OrderIconImg}}"></image>
+			</view>
+			<view class="personalOrderText">
+				<text>{{item.OrderIconTitle}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- 订单信息模块 -->
+
+	<!-- 广告轮播区域 -->
+	<view class="LoginPoster">
+		<swiper circular="true" style="height: 220rpx;" indicator-dots="true" autoplay="true" interval="3000" indicator-color="#FFF" indicator-active-color="#ef2a28">
+			<block wx:for="{{LoginPoster}}" wx:key="index">
+				<swiper-item>
+					<view class="itemSwiper">
+						<image src="{{item.LoginPosterImg}}"></image>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 广告轮播区域 -->
+
+	<!-- 其他功能区域 -->
+
+	<view class="LoginOther">
+		<!-- 余额 + 收藏 + 积分 -->
+		<view class="LoginOtherBic">
+			<view class="LoginOtherBicSon">
+				<view bindtap="LoginPeople">
+					<view>
+						<i-icon type="financial_fill" size="34" color="#f32e1e" />
+					</view>
+					<view><text>余额</text></view>
+				</view>
+
+				<view>
+					<view>
+						<i-icon type="like_fill" size="34" color="#4c8aed" />
+					</view>
+					<view><text>收藏</text></view>
+				</view>
+
+				<view bindtap="LoginPeople">
+					<view>
+						<i-icon type="flag_fill" size="34" color="#48cbc3" />
+					</view>
+					<view><text>积分</text></view>
+				</view>
+			</view>
+		</view>
+		<!-- 余额 + 收藏 + 积分 -->
+
+		<!-- 其他单分块 -->
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="group_fill" size="20" color="#333" /> 我的拼团
+			</i-cell>
+		</view>
+
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="flashlight_fill" size="20" color="#333" /> 我的秒杀
+			</i-cell>
+		</view>
+
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="coupons_fill" size="20" color="#333" /> 我的优惠券
+			</i-cell>
+		</view>
+
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="flag_fill" size="20" color="#333" /> 我的兑换
+			</i-cell>
+		</view>
+
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="service_fill" size="20" color="#333" /> 快速购买
+			</i-cell>
+		</view>
+
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="shop_fill" size="20" color="#333" /> 我的小店
+			</i-cell>
+		</view>
+
+		<view class="LoginOtherSingle">
+			<i-cell is-link>
+				<i-icon type="live_fill" size="20" color="#333" /> 我的直播间
+			</i-cell>
+		</view>
+
+		<!-- 其他单分块 -->
+
+	</view>
+
+	<!-- 其他功能区域 -->
+
+	<!-- 底部版权信息编写开始 -->
+	<i-divider content="济南优客 © 版权所有" i-class="copyrightClass" color="#e0e0e0" lineColor="#e0e0e0"></i-divider>
+	<!-- 底部版权信息编写结束 -->
+
+
+</view>
+<!-- 总体个人中心编写结束 -->

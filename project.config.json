@@ -1,0 +1,175 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wxd7613fd4a3991bb3",
+	"projectname": "%E4%BC%98%E5%AE%A2%E5%95%86%E5%9F%8E",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/personal/personal",
+					"pathName": "pages/personal/personal",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/category/category",
+					"pathName": "pages/category/category",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/product_detail/product_detail",
+					"pathName": "pages/product_detail/product_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopcar/shopcar",
+					"pathName": "pages/shopcar/shopcar",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/seckill/seckill",
+					"pathName": "pages/seckill/seckill",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/seckill_detail/seckill_detail",
+					"pathName": "pages/seckill_detail/seckill_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopStreet/shopStreet",
+					"pathName": "pages/shopStreet/shopStreet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopStreet_detail/shopStreet_detail",
+					"pathName": "pages/shopStreet_detail/shopStreet_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/store_information/store_information",
+					"pathName": "pages/store_information/store_information",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login_people/login_people",
+					"pathName": "pages/login_people/login_people",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Integral_mall/Integral_mall",
+					"pathName": "pages/Integral_mall/Integral_mall",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/ranking/ranking",
+					"pathName": "pages/ranking/ranking",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/daily_specials/daily_specials",
+					"pathName": "pages/daily_specials/daily_specials",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/live/live",
+					"pathName": "pages/live/live",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/live_detail/live_detail",
+					"pathName": "pages/live_detail/live_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/brand_Purchase/brand_Purchase",
+					"pathName": "pages/brand_Purchase/brand_Purchase",
+					"scene": null
+				}
+			]
+		}
+	}
+}

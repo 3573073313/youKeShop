@@ -1,0 +1,148 @@
+<!--pages/live_detail/live_detail.wxml-->
+<view class="liveDetail">
+
+	<!-- <live-player src="https://domain/pull_stream" mode="RTC" autoplay bindstatechange="statechange" binderror="error" style="width: 100%; height: 100%;" /> -->
+
+	<!-- 頂部信息 -->
+	<view class="liveDetailXinxi FlexD">
+		<view class="liveDetailXinxiLeft mt120 FlexD">
+			<view class="liveDetailXinxiLeftImg mt10">
+				<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587724674831&di=123952d069b7b799c9762293a86758c1&imgtype=0&src=http%3A%2F%2Fimg.aso.aizhan.com%2Ficon%2Ffa%2F28%2Ff2%2Ffa28f2ee419988b019454955b1529c52.jpg"></image>
+			</view>
+			<view class="liveDetailXinxiLeftTitle mt10">
+				<view>
+					<text>春风官方旗舰店</text>
+				</view>
+				<view>
+					<text>50000</text>人在线
+				</view>
+			</view>
+			<view class="liveDetailXinxiLeftFollow" bindtap="FollowFun">
+				<text wx:if="{{follow}}">关注</text>
+				<text wx:else>已关注</text>
+			</view>
+		</view>
+		<view class="liveDetailXinxiNum mr20">
+			<view class="liveDetailXinxiNumTitle">
+				<text>优客直播</text>
+			</view>
+			<view class="liveDetailXinxiNums">
+				<text>ID:15832320</text>
+			</view>
+		</view>
+	</view>
+	<!-- 頂部信息 -->
+
+	<!-- 底部操作 -->
+
+	<view class="liveDetailBottom">
+		<!-- 信息 -->
+		<view class="liveDetailBottomInformaction">
+
+		</view>
+		<!-- 信息 -->
+
+		<!-- 操作欄 -->
+		<view class="liveDetailBottomNav FlexD">
+			<view class="liveDetailBottomNavShop" bindtap="ShopListFun">
+				<text>99</text>
+			</view>
+
+			<i-action-sheet visible="{{ visible4 }}" bind:cancel="handleCancel1" mask-closable="true">
+				<view slot="header">
+					<view class="ShopListTitle">
+						<text>直播产品</text>
+					</view>
+					<!-- 产品 -->
+					<view class="ShopList">
+						<scroll-view scroll-y="true">
+							<!-- 单个类 -->
+							<view class="ShopListSon" wx:for="{{LiveProduct}}" wx:key="{{index}}">
+								<view class="ShopListSonImg">
+									<view class="ShopListSonNum">
+										<text>{{index + 1}}</text>
+									</view>
+									<image src="{{item.LiveProductImg}}"></image>
+								</view>
+								<view class="ShopListSonCont">
+									<view class="ShopListSonContTop">
+										<text>{{item.LiveProductTitle}}</text>
+									</view>
+									<view class="ShopListSonContBtm">
+										<view>￥<text>{{item.LiveProductPeople}}</text></view>
+										<view class="people"><text>立即抢购</text></view>
+									</view>
+								</view>
+							</view>
+
+							<!-- 单个类 -->
+
+						</scroll-view>
+					</view>
+					<!-- 产品 -->
+
+				</view>
+			</i-action-sheet>
+
+
+			<view bindtap="inputFun" class="liveDetailBottomNavInput mt20 ml10  mr10">
+				<i-icon type="message" size="24" />
+				<text>您想说点什么?</text>
+			</view>
+			<i-action-sheet visible="{{ visible3 }}" bind:cancel="handleCancel1" mask-closable="true">
+				<view slot="header">
+					<view class="input AnimationSon Abottom paddLR20 FlexD" style="padding: 10rpx 40rpx;line-height: 65rpx;">
+						<i-icon type="interactive" size="24" />
+						<view>
+							<input type="text" placeholder="你想说点什么？"></input>
+						</view>
+						<view style="width: 20%;">
+							<button>发送</button>
+						</view>
+					</view>
+				</view>
+			</i-action-sheet>
+
+
+
+			<view class="liveDetailBottomNavThree FlexD">
+				<view bindtap="chatFun">
+					<i-icon type="feedback" size="34" />
+				</view>
+				<!-- 弹出层 -->
+				<i-action-sheet visible="{{ visible2 }}" show-cancel bind:cancel="handleCancel1" mask-closable="true">
+					<view slot="header">
+						<view class="AnimationSon Abottom paddLR20">
+							<i-icon type="prompt_fill" size="20" /><text>此主播涉嫌违规，点击举报！</text>
+						</view>
+					</view>
+				</i-action-sheet>
+				<!-- 弹出层 -->
+
+				<view bindtap="handleOpen1">
+					<i-icon type="share" size="34" />
+				</view>
+
+				<i-action-sheet visible="{{ visible1 }}" show-cancel bind:cancel="handleCancel1" mask-closable="true">
+					<view slot="header">
+						<view class="AnimationSon Abottom paddLR20">
+							<i-icon type="live_fill" size="20" /><text>立即分享直播间</text>
+						</view>
+					</view>
+				</i-action-sheet>
+
+				<i-message id="message" />
+				<like-fx count="{{count}}"></like-fx>
+				<view bindtap="clickHandler" style="position: relative;">
+					<view class="count"><text>{{count}}</text></view>
+					<i-icon type="like" size="34" />
+				</view>
+			</view>
+		</view>
+		<!-- 操作欄 -->
+
+	</view>
+
+	<!-- 底部操作 -->
+
+</view>

@@ -1,0 +1,35 @@
+<!--pages/brand_Purchase/brand_Purchase.wxml-->
+<view class="PurchasePage">
+
+	<!-- 导航 -->
+	<view class="PurchasePageNav">
+		<scroll-view scroll-x="true" enable-flex="true">
+			<view class="PurchasePageNavSon {{NavIndex == index ? 'NavSon' : '' }}" catchtap="NavFun" wx:for="{{NavTitle}}" wx:key="*this" data-index="{{index}}">
+				<text>{{item.NavTitle}}</text>
+			</view>
+		</scroll-view>
+	</view>
+	<!-- 导航 -->
+
+
+
+	<!-- 内容 -->
+	<view class="PurchasePageNavMain">
+		<view class="PurchasePageNavMainSon FlexD" wx:for="{{NavTitle[NavIndex].NavConternt}}" wx:key="*this">
+			<view class="PurchasePageNavMainSonImg mt24">
+				<image src="{{item.NavConterntMainImg}}"></image>
+			</view>
+			<view class="PurchasePageNavMainSonCnt mt24">
+				<view class="PurchasePageNavMainSonCntTop  TxtHide">
+					<text>{{item.NavConterntMainTitle}}</text>
+				</view>
+				<view class="PurchasePageNavMainSonCntBtm">￥<text>{{item.NavConterntMainPeople}}</text></view>
+			</view>
+		</view>
+
+
+	</view>
+	<!-- 内容 -->
+
+
+</view>

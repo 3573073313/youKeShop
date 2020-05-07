@@ -1,0 +1,93 @@
+<!--pages/shopStreet/shopStreet.wxml-->
+<view class="shopStreet">
+	<!-- 搜索条 -->
+	<view class="shopStreetSearch">
+		<view class="cu-bar search bg-ef2a28">
+			<view class="search-form round">
+				<text class="cuIcon-search"></text>
+				<input type="text" placeholder="搜索您喜欢店铺" confirm-type="search"></input>
+			</view>
+		</view>
+	</view>
+	<!-- 搜索条 -->
+
+	<!-- 导航 【综合排序 + 销量优先 + 信用 + 人气】 -->
+
+	<view class="shopStreetNav">
+		<view class="{{active == index ? 'showColor' : ''}}" wx:for="{{Nav}}" wx:key="index" data-index="{{index}}" catchtap="NavFun"><text>{{item.NavTitle}}</text></view>
+	</view>
+
+	<!-- 导航 【综合排序 + 销量优先 + 信用 + 人气】 -->
+
+	<!-- 店铺街 -->
+
+	<view class="shopStreetContent">
+
+		<!-- 单个店铺 -->
+		<view class="shopStreetContentSon" wx:for="{{shopStreetProduct}}" wx:key="index">
+			<!-- 标题 -->
+			<view class="shopStreetContentSonTitle">
+				<view>
+					<view class="shopStreetContentSonImg">
+						<image src="{{item.ProductShopLogoImg}}"></image>
+					</view>
+					<view class="shopStreetContentSonTitleDate">
+						<view class="shopStreetTitle">
+							<text style="margin-right: 10rpx;">{{item.ProductShopTitle}}</text>
+							<text>{{item.ProductShopDateTime}}年老店</text>
+						</view>
+						<view class="shopStreetXinXi">
+							<view style="margin-right: 20rpx;">
+								<i-icon type="integral_fill" /><text>{{item.ProductShopGrade}}级</text>
+							</view>
+							<view>
+								<i-icon type="emoji_fill" />
+								<text>好评率:{{item.ProductShopEvaluate}}%</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="EnterShop" data-index="{{index}}" catchtap="GoShop">
+					<text>进店</text>
+				</view>
+			</view>
+			<!-- 标题 -->
+			<!-- 产品 -->
+
+			<view class="shopStreetContentSonMain">
+				<!-- 单个产品 -->
+				<view class="shopStreetContentSonMainList" wx:for="{{item.Product}}" wx:key="index">
+					<image src="{{item.ProductImg}}"></image>
+					<!-- 價格 -->
+					<view class="ProductPeople">
+						<text>￥{{item.ProductProple}}</text>
+					</view>
+					<!-- 價格 -->
+				</view>
+				<!-- 单个产品 -->
+
+			</view>
+
+			<!-- 产品 -->
+
+			<!-- 分類 -->
+
+			<view class="shopStreetContentSonFenClass">
+				<view class="shopStreetContentSonFenClassSon" wx:for="{{item.TitleFenlei}}" wx:key="index">
+					<text>{{item.TitleFenleiText}}</text>
+				</view>
+			</view>
+
+			<!-- 分類 -->
+
+		</view>
+
+
+		<!-- 单个店铺 -->
+
+
+	</view>
+
+	<!-- 店铺街 -->
+
+</view>

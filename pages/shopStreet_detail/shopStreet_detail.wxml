@@ -1,0 +1,210 @@
+<!--pages/shopStreet_detail/shopStreet_detail.wxml-->
+<!-- 商家信息 -->
+<view class="businessInformation">
+	<!-- 店铺背景图 -->
+	<view class="businessInformationBgImg">
+		<image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=119259162,3170711311&fm=26&gp=0.jpg"></image>
+	</view>
+	<!-- 店铺背景图 -->
+	<!-- 信息 + 分类 + 公告 -->
+	<view class="InformationNav">
+
+		<!-- 信息 -->
+		<view class="Information">
+			<view class="InformationName">
+				<view class="InformationNameTitle" bindtap="InformationFun">
+					<text>春风官方旗舰店</text>
+					<i-icon type="enterinto" size="18" />
+				</view>
+				<view>
+					<i-icon type="group" size="16" />粉丝量:<text>172W</text>
+				</view>
+			</view>
+			<!-- 关注 -->
+			<view class="InformationFollow">
+				<view class="InformationFollowBtn">
+					<i-icon type="collection" color="#fff" size="18" /> <text>关注</text>
+				</view>
+			</view>
+			<!-- 关注 -->
+		</view>
+
+		<!-- 信息 -->
+		<!-- 分类（首页 + 宝贝 + 新品 + 折扣） -->
+		<view class="businessCategory">
+			<view class="businessCategoryNav {{Show == index ? 'navactive' : ''}}" wx:for="{{businessNav}}" wx:key="index" data-index="{{index}}" bindtap="NavFun">
+				<text>{{item.businessNavTitle}}</text>
+			</view>
+		</view>
+
+		<!-- 分类（首页 + 宝贝 + 新品 + 折扣） -->
+		<!-- 公告 -->
+
+		<view class="businesIntegral">
+			<i-notice-bar icon="message_fill" speed="5000">
+				{{title}}
+			</i-notice-bar>
+		</view>
+
+		<!-- 公告 -->
+	</view>
+	<!-- 信息 + 分类 + 公告 -->
+
+	<!-- 產品4大 -->
+	<view>
+		<!-- 首页 -->
+		<view class="product {{Show == 0 ? 'show' : ''}}">
+			<!-- swiper -->
+			<view class="productSwiper" style="height: {{height}}rpx;">
+				<swiper indicator-dots="true" indicator-color="#999" indicator-active-color="#fff" class="SwiperHeight">
+					<block wx:for="{{businessBanner}}" wx:key="index">
+						<swiper-item class="productSwiper">
+							<image lazy-load="true" bindload="ImgFunLoad" style="height: {{height}}rpx;" src="{{item.businessBannerImg}}"></image>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+			<!-- swiper -->
+			<!-- 产品宣传图 -->
+			<view class="shopStreetDetailImg">
+				<view class="shopStreetDetailImgSon">
+					<navigator>
+						<image mode="widthFix" src="https://group.dmeit.cn/carChunfeng.jpg"></image>
+					</navigator>
+				</view>
+			</view>
+			<!-- 产品宣传图 -->
+		</view>
+		<!-- 首页 -->
+
+		<!-- 宝贝 -->
+		<!-- 
+				点击按钮
+				切换样式类
+		-->
+		<view class="product {{Show == 1 ? 'show' : ''}}">
+			<!-- 操作头 + 排列方式 -->
+			<view class="productTitle">
+				<view class="productTitleNav">
+					<view wx:for="{{productTitleNav}}" wx:key="index" data-navindex="{{index}}" class="{{Navindex == index ? 'ShowColor' : ''}}" catchtap="productTitleNavFun">
+						<text>{{item.productTitleNavTitle}}</text>
+					</view>
+				</view>
+				<view class="productTitleImg" catchtap="ImgFuns">
+					<image src="{{ImgFlagOne}}"></image>
+					<!-- <image src="https://group.dmeit.cn/pxIconDown.png"></image> -->
+				</view>
+			</view>
+			<!-- 操作头 + 排列方式 -->
+
+			<view class="productList">
+
+				<!-- 产品 -->
+				<view wx:for="{{productList}}" wx:key="index" class="{{ImgFlag == true ? 'productListSon' : 'transverse'}}">
+					<view class="productListSonImg">
+						<image src="{{item.productListImg}}"></image>
+					</view>
+					<view class="flexLayout">
+						<view class="productListSonTitle">
+							<text>{{item.productListTitles}}</text>
+						</view>
+						<view class="productListSonPeople">
+							<view class="font34">
+								￥<text>{{item.productListProple}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 产品 -->
+			</view>
+
+
+
+		</view>
+		<!-- 宝贝 -->
+
+		<!-- 新品 -->
+		<view class="product {{Show == 2 ? 'show' : ''}}">
+			<!-- 操作头 + 排列方式 -->
+			<view class="productTitle">
+				<view class="productTitleNav">
+					<view wx:for="{{productTitleNav}}" wx:key="index" data-navindex="{{index}}" class="{{Navindex == index ? 'ShowColor' : ''}}" catchtap="productTitleNavFun">
+						<text>{{item.productTitleNavTitle}}</text>
+					</view>
+				</view>
+				<view class="productTitleImg" catchtap="ImgFuns">
+					<image src="{{ImgFlagOne}}"></image>
+					<!-- <image src="https://group.dmeit.cn/pxIconDown.png"></image> -->
+				</view>
+			</view>
+			<!-- 操作头 + 排列方式 -->
+
+			<view class="productList">
+				<!-- 产品 -->
+				<view wx:for="{{productListNews}}" wx:key="index" class="{{ImgFlag == true ? 'productListSon' : 'transverse'}}">
+					<view class="productListSonImg">
+						<image src="{{item.productListImg}}"></image>
+					</view>
+					<view class="flexLayout">
+						<view class="productListSonTitle">
+							<text>{{item.productListTitles}}</text>
+						</view>
+						<view class="productListSonPeople">
+							<view class="font34">
+								￥<text>{{item.productListProple}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 产品 -->
+			</view>
+		</view>
+		<!-- 新品 -->
+
+		<!-- 折扣 -->
+		<view class="product {{Show == 3 ? 'show' : ''}}">
+
+			<!-- 操作头 + 排列方式 -->
+			<view class="productTitle">
+				<view class="productTitleNav">
+					<view wx:for="{{productTitleNav}}" wx:key="index" data-navindex="{{index}}" class="{{Navindex == index ? 'ShowColor' : ''}}" catchtap="productTitleNavFun">
+						<text>{{item.productTitleNavTitle}}</text>
+					</view>
+				</view>
+				<view class="productTitleImg" catchtap="ImgFuns">
+					<image src="{{ImgFlagOne}}"></image>
+					<!-- <image src="https://group.dmeit.cn/pxIconDown.png"></image> -->
+				</view>
+			</view>
+			<!-- 操作头 + 排列方式 -->
+
+			<view class="productList">
+				<!-- 产品 -->
+				<view wx:for="{{productListNews}}" wx:key="index" class="{{ImgFlag == true ? 'productListSon' : 'transverse'}}">
+					<view class="productListSonImg">
+						<image src="{{item.productListImg}}"></image>
+					</view>
+					<view class="flexLayout">
+						<view class="productListSonTitle">
+							<text>{{item.productListTitles}}</text>
+						</view>
+						<view class="productListSonPeople">
+							<view class="font34">
+								￥<text>{{item.productListProple}}</text>
+							</view>
+							<view class="font35">
+								￥<text>{{item.productListProple}}</text>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 产品 -->
+			</view>
+		</view>
+		<!-- 折扣 -->
+
+	</view>
+	<!-- 產品4大 -->
+
+</view>
+<!-- 商家信息 -->

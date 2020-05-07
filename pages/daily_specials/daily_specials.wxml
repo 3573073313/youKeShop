@@ -1,0 +1,44 @@
+<!--pages/daily_specials/daily_specials.wxml-->
+<view class="dailySpecialsPages">
+	<view class="dailySpecialsPagesNav FlexD">
+		<scroll-view enable-flex="true" scroll-x="true" class="FlexD">
+			<view class="dailySpecialsPagesNavSon {{NavIndex == index? 'BorShow' : ''}}" wx:key="index" data-index="{{index}}" catchtap="NavFun" wx:for="{{dailyProduct}}">
+				<text>{{item.dailyProductClass}}</text>
+			</view>
+		</scroll-view>
+	</view>
+	<!-- 标题层 -->
+	<view class="dailySpecialsPagesTitle FlexD">
+		<view class="dailySpecialsPagesTitleH2"><text>超低价好货</text></view>
+		<view class="dailySpecialsPagesConts FlexD FlexDJbet">
+			<view wx:for="{{dailyProduct[NavIndex].dailyProductSonTitle}}" wx:key="index">
+				<i-icon type="success" />
+				<text>{{item.dailyProductSonTitles}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- 标题层 -->
+
+
+	<!-- 产品层 -->
+	<view class="dailySpecialsPagesCont Ohidden">
+		<view class="dailySpecialsPagesContSon BgShow Ohidden FlexD mt20" wx:for="{{dailyProduct[NavIndex].dailyProductSonCont}}" wx:key="index">
+			<view class="dailySpecialsPagesContSonImg  mt40 mr20">
+				<image src="{{item.dailyProductSonContImg}}"></image>
+			</view>
+			<view class="dailySpecialsPagesContSonMain mt40 Flex">
+				<view class="dailySpecialsPagesContSonMainTitle TxtHide">
+					<text>{{item.dailyProductSonContTitle}}</text>
+				</view>
+				<view style="font-size: 30rpx;line-height: 60rpx; height: 40rpx;">
+					￥<text>{{item.dailyProductSonContPeople}}</text> <text style="text-decoration: line-through;">￥{{item.dailyProductSonContNumA}}</text>
+				</view>
+				<view class="dailySpecialsPagesBtn mt10">
+					<text>立刻抢购</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+</view>

@@ -1,0 +1,128 @@
+<!--pages/seckill_detail/seckill_detail.wxml-->
+
+<view class="seckill">
+
+	<!-- 产品swiper轮播图片 + 转发 -->
+	<view class="product_DetailImg">
+		<swiper class="swiper-box" circular="true" indicator-dots="true" autoplay="true" interval="3000" indicator-color="#FFF" indicator-active-color="#ef2a28">
+			<block wx:for="{{productSwiper}}" wx:key="*this">
+				<swiper-item>
+					<view class="swiperImg">
+						<image src="{{item.productSwiperImg}}"></image>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+		<!-- 转发功能 -->
+		<view class="productForward">
+			<button open-type="share" class="ShareClass"></button>
+			<i-icon type="send" color="#fff" size="30" />
+		</view>
+		<!-- 转发功能 -->
+	</view>
+	<!-- 产品swiper轮播图片 + 转发 -->
+
+	<!-- 倒计时 + 价格 -->
+	<view class="public_Detail_DateTime">
+		<!-- 价格 -->
+		<view class="public_Detail_DateTime_People">
+			<view>
+				<text>￥</text><text style="font-size: 50rpx;">1600</text>
+				<text style="text-decoration: line-through; font-weight: 00;">￥1800</text>
+			</view>
+		</view>
+		<!-- 价格 -->
+
+		<!-- 时间 -->
+		<view class="public_Detail_DateTimeTimes">
+			<view style="line-height: 100rpx;">
+				<text>距离时间结束:</text>
+			</view>
+			<view>
+				<i-count-down target="{{targetTime}}" i-class="TimeStyle" clear-timer="{{clearTimer}}"></i-count-down>
+			</view>
+		</view>
+		<!-- 时间 -->
+
+	</view>
+	<!-- 倒计时 + 价格 -->
+
+	<!-- 产品信息 -->
+
+	<view class="public_Detail_Information">
+		<!-- 信息 -->
+		<view class="public_Detail_InformationTitle">
+			<text>官方旗舰店罗技g502hero有线电竞游戏鼠标G502主宰 RGB 吃鸡宏加重机械lol/cf 台式电脑笔记本专用</text>
+		</view>
+		<!-- 信息 -->
+
+		<!-- 销量 -->
+		<view class="public_Detail_InformationSalesNum">
+			<view>总销量: <text>53260</text>件</view>
+			<view>限量: <text>200</text>件</view>
+		</view>
+		<!-- 销量 -->
+
+
+	</view>
+
+	<!-- 产品信息 -->
+
+	<!-- 产品介绍 -->
+	<view class="publicTips">
+		<text>详情介绍</text>
+	</view>
+	<!-- 产品介绍 -->
+
+	<!-- 详情 -->
+	<view class="publicDetail">
+		<image mode="widthFix" src="https://img.alicdn.com/imgextra/i3/2863054326/O1CN01LcQJSq1hpLsNEtOLu_!!2863054326.jpg"></image>
+	</view>
+	<!-- 详情 -->
+
+	<!-- 购买 + 加入购物车 + 收藏 + 客服 -->
+	<view class="productPayment">
+		<view class="productPaymentIconLeft">
+
+			<view class="productPaymentIcon" bindtap="ServiceFun">
+				<view>
+					<i-icon type="interactive_fill" color="#2c2c2c" size='20' />
+				</view>
+				<view><text>客服</text></view>
+			</view>
+
+			<view class="productPaymentIcon" bindtap="CollectionFun">
+				<view>
+					<i-icon type="flashlight_fill" color="#2c2c2c" size='20' />
+				</view>
+				<view><text>秒杀中</text></view>
+			</view>
+
+			<view class="productPaymentIcon" bindtap="ShopFun">
+				<view>
+					<i-icon type="publishgoods_fill" color="#2c2c2c" size='20' />
+				</view>
+				<view><text>购物车</text></view>
+			</view>
+
+		</view>
+		<view class="productPaymentShopRight">
+			<view class="AddShopColor" catchtap="AddCarShopFun">
+				<text>单独购买</text>
+			</view>
+			<view class="BuyColor">
+				<text>秒杀购买</text>
+			</view>
+		</view>
+	</view>
+	<!-- 购买 + 加入购物车 + 收藏 + 客服 -->
+
+</view>
+
+<!-- 返回顶部编写开始 -->
+
+<view class="WeChatTop" bindtap="goTop" hidden="{{!floorstatus}}">
+	<i-icon type="packup" color="#fff" size="26" />
+</view>
+
+<!-- 返回顶部编写结束 -->

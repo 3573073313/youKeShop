@@ -1,0 +1,161 @@
+/* pages/Integral_mall/Integral_mall.wxss */
+.IntegralPage {
+  width: 100%;
+  height: auto;
+  background-color: #f90;
+}
+
+.IntegralPageSwiper {
+  width: 100%;
+  height: 370rpx;
+  background-color: #ef2a28;
+  position: relative;
+}
+
+.IntegralPageSwiperBtm {
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-top-left-radius: 80rpx;
+  border-top-right-radius: 80rpx;
+}
+
+.IntegralPageSwiperSon {
+  width: 94%;
+  height: 300rpx;
+  background-color: #e1e1e1;
+  border-radius: 20rpx;
+  position: absolute;
+  bottom: 35rpx;
+  left: 50%;
+  margin-left: -47%;
+  overflow: hidden;
+}
+
+.Img>image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.mallCoupon {
+  width: 100%;
+  height: auto;
+  background-color: red;
+}
+
+
+.mallProduct {
+  width: 100%;
+  height: auto;
+  background-color: #fafafa;
+}
+
+.mallCont {
+  width: 100%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 40rpx;
+  padding: 0rpx 30rpx;
+}
+
+.mallContSon {
+  width: 48%;
+  height: 160rpx;
+  background-image: url(https://group.dmeit.cn/imgyhqu.jpg);
+  background-size: 100% 100%;
+  margin-bottom: 10rpx;
+  margin-top: 20rpx;
+  color: #fff;
+}
+
+.mallContSonTitle {
+  width: 100%;
+  height: 90rpx;
+  /* background-color: red; */
+  padding: 16rpx 30rpx;
+  font-size: 30rpx;
+}
+
+.mallContSonBtn {
+  width: 100%;
+  height: 70rpx;
+}
+
+.mallBtn {
+  width: 120rpx;
+  height: 40rpx;
+  background-color: #d9ac69;
+  text-align: center;
+  color: #fff;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  border-radius: 50rpx;
+  float: right;
+  margin-right: 20rpx;
+}
+
+.mallProductCont {
+  width: 100%;
+  height: auto;
+  padding: 0rpx 30rpx;
+}
+
+.mallProductCont>view {
+  width: 48%;
+  height: 550rpx;
+  background-color: #fff;
+  flex-shrink: 0;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin-top: 10rpx;
+}
+
+.mallProductContImg {
+  width: 100%;
+  height: 335rpx;
+}
+
+.mallProductContImg>image {
+  width: 100%;
+  height: 100%;
+}
+
+.mallProductContTitle {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0rpx 20rpx;
+  font-size: 30rpx;
+}
+
+.mallProductContPeople {
+  width: 100%;
+  height: 60rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+  padding: 0rpx 20rpx;
+  color: #d9ac69;
+}
+
+.mallProductContBtn {
+  width: 80%;
+  height: 60rpx;
+  background-color: #d9ac69;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+  margin: 0 auto;
+  margin-top: 16rpx;
+  border-radius: 50rpx;
+}
